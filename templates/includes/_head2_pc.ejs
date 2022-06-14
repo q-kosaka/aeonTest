@@ -1,0 +1,71 @@
+<%_ include( '_const2') _%>
+<%_ include( '_card') _%>
+<%_ include( '_flow') _%>
+<%_ include( '_attention') _%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title><% if( data.title !== '' ){ %><%= data.title + ' | ' ; %><%= TITLE %><% }else{ %><%= TITLE %><% } %></title>
+<meta name="description" content="<% if( data.description !== '' ){ %><%= data.description; %><% }else{ %><%= DESCRIPTION %><% } %>">
+<meta name="keywords" content="<% if( data.keyword !== '' ){ %><%= data.keyword + ','; %><%= KEYWORD %><% }else{ %><%= KEYWORD %><% } %>">
+<meta name="robots" content="index,follow">
+<meta name="robots" content="noydir">
+<meta name="robots" content="noodp">
+
+
+<script>
+(function(){
+var ua = navigator.userAgent.toLowerCase();
+var isIPhone = /i(phone|pod)/.test(ua);
+var isAndroidMobile = /android(.+)?mobile/.test(ua);
+if(isIPhone || isAndroidMobile){
+document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+}
+else{
+document.write('<meta name="viewport" content="width=1080, user-scalable=yes">');
+}
+}());
+</script>
+
+<link rel="shortcut icon" href="/common/images/favicon.ico">
+<link rel="home" href="https://www.waon.net/" title="WAON">
+<link rel="help" href="/site/sitemap" title="サイトマップ">
+
+<link href="/asset/css/reset.css" rel="stylesheet" type="text/css">
+<link href="/asset/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<link href="/asset/css/style.css?d200428" rel="stylesheet" type="text/css">
+<link href="/asset/css/detail.css?d200428" rel="stylesheet" type="text/css">
+
+<!--GA計測 2018.2/25-->
+<script type="text/javascript">
+	var UA = navigator.userAgent;
+	var GA_account_ua;
+
+	if(UA.indexOf('WaonApp') > 0){
+		GA_account_ua=("UA-49818049-5");
+	}else{
+		GA_account_ua=("UA-22626634-4");
+	}
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', GA_account_ua, 'auto');
+	ga('require', 'displayfeatures');
+	ga('send', 'pageview');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Ads: 830611597 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-830611597"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-830611597');
+</script>	
+
+</head>
+
+<%- include( '_header2_' + data.device , { data : data } ); %>

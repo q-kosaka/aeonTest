@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>サイトタイトル</title>
+  <meta name="description" content="サイトデスクリプション">
+  <meta name="keywords" content="サイトキーワード">
+  <meta name="robots" content="index,follow">
+  <meta name="robots" content="noydir">
+  <meta name="robots" content="noodp">
+  <script>
+    (function() {
+      var ua = navigator.userAgent.toLowerCase();
+      var isIPhone = /i(phone|pod)/.test(ua);
+      var isAndroidMobile = /android(.+)?mobile/.test(ua);
+      if (isIPhone || isAndroidMobile) {
+        document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+      } else {
+        document.write('<meta name="viewport" content="width=1080, user-scalable=yes">');
+      }
+    }());
+  </script>
+  <link rel="shortcut icon" href="/common/images/favicon.ico">
+  <link rel="home" href="https://www.waon.net/" title="WAON">
+  <link rel="help" href="/site/sitemap" title="サイトマップ">
+  <link href="/asset/css/reset.css" rel="stylesheet" type="text/css">
+  <link href="/asset/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+  <link href="/asset/css/style.css?d200428" rel="stylesheet" type="text/css">
+  <link href="/asset/css/detail.css?d200428" rel="stylesheet" type="text/css">
+  <!--GA計測 2018.2/25-->
+  <script type="text/javascript">
+    var UA = navigator.userAgent;
+    var GA_account_ua;
+    if (UA.indexOf('WaonApp') > 0) {
+      GA_account_ua = ("UA-49818049-5");
+    } else {
+      GA_account_ua = ("UA-22626634-4");
+    }
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', GA_account_ua, 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Ads: 830611597 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-830611597"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-830611597');
+  </script>
+</head>
+<body class="top topH1" id="element">
+  <div class="l-ofhidden">
+    <!-- ================================
+HEADER
+===================================== -->
+    <div id="header" class="l-full">
+      <header>
+        <!-- ロゴ -->
+        <div id="headerNav" class="l-wrap header">
+          <div class="header_box df header_box-title">
+            <div class="header_boxInner cFix">
+              <p id="headerTitle" class="header_boxInnerTitle header_boxInnerTitle-main">
+                <a href="/">
+                  <img src="/asset/img/common/img-head-logo.png?d200513" alt="WAON">
+                </a>
+              </p>
+              <div class="header_boxInnerTitle header_boxInnerTitle-sub">
+                <p class="header_boxInnerTitleText">全国約84万8千か所<br>(2021年7月現在)で<br>使えます</p>
+              </div>
+              <div class="header_boxOption">
+                <ul class="header_boxOptionNav df cFix">
+                  <li class="header_boxOptionNavList">
+                    <a class="header_boxOptionNavListInner header_boxOptionNavListInner-orange arrow-orange" href="/rescue/">盗難・紛失・<br class="sp">破損の際に</a>
+                  </li>
+                  <li class="header_boxOptionNavList">
+                    <a class="header_boxOptionNavListInner arrow-blue" href="/faq/">よくある<br class="sp">ご質問</a>
+                  </li>
+                  <!-- pc時のみ -->
+                  <li id="searchBtn" class="header_boxOptionNavList header_boxOptionNavList-search">検索</li>
+                  <!-- / pc時のみ -->
+                </ul>
+                <div class="header_boxOptionLang">
+                  <ul class="header_boxOptionLangInner cFix">
+                    <li class="header_boxOptionLangInnerList">Language</li>
+                    <li class="header_boxOptionLangInnerList header_boxOptionLangInnerList-select">
+                      <select class="lang">
+                        <option val="jp">日本語</option>
+                        <option val="en">English</option>
+                        <option val="sc">中文（简体字）</option>
+                        <option val="tc">中文（繁體字）</option>
+                        <option val="kr">한국어</option>
+                        <option val="th">ภาษาไทย</option>
+                        <option val="vi">Tiếng Việt</option>
+                        <option val="ru">русский</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="searchBox" class="searchBox">
+              <div class="searchBox_inner">
+                <!--
+          <form method="get" action="http://sitesearch.waon.net/ja_waon/search.x">
+            <input type="search" placeholder="サイト内検索" name="q" value="" id="MF_form_phrase" autocomplete="off">
+            <button type="submit">検索</button>
+<input type="hidden" name="ie" value="utf8" />
+<input type="hidden" name="page" value="1" />
+<input type="hidden" name="site" value="" />
+          </form>
+-->
+                <!--MARSFINDERここから-->
+                <div class="mf_finder_header">
+                  <!-- ↓検索窓用カスタムエレメント -->
+                  <!--<mf-search-box submit-text="" ajax-url="//sitesearch.waon.net/ja_waon/x_search.x" serp-url="//renewal.waon-nx.t-bunka.biz/search_result.php#/" doctype-hidden options-hidden></mf-search-box>-->
+                  <!--テスト用
+<mf-search-box submit-text="" ajax-url="//mf2demo.marsflag.com/waon_test/x_search.x" serp-url="//renewal.waon-nx.t-bunka.biz/search_result.php#/" doctype-hidden options-hidden></mf-search-box>
+-->
+                  <!--本番用-->
+                  <mf-search-box submit-text="" ajax-url="//mf2apr01.marsflag.com/aeon__ja_waon__customelement/x_search.x" serp-url="//www.waon.net/search_result.php#/" doctype-hidden options-hidden></mf-search-box>
+                </div>
+                <!--MARSFINDERここまで-->
+                <p id="searchClose" class="searchBox_close">閉じる</p>
+              </div>
+            </div>
+            <div id="hamburgerBtn" class="header_boxInner hamburger">
+              <ul class="hamburger_line">
+                <li class="hamburger_lineList hamburger_lineList-top"></li>
+                <li class="hamburger_lineList hamburger_lineList-middle"></li>
+                <li class="hamburger_lineList hamburger_lineList-bottom"></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- headerNav -->
+        <nav id="hamburgerMenu" class="header_box header_box-nav">
+          <ul class="l-wrap header_boxMenu gnav df">
+            <li class="gnav_list arrow-orange">
+              <a href="/about/">WAONとは</a>
+            </li>
+            <li class="gnav_list arrow-orange">
+              <a href="/shop/">使えるお店を探す</a>
+            </li>
+            <li class="gnav_list arrow-orange">
+              <a href="/point_exchange/">提携先のポイントを<br>WAONポイントに交換</a>
+            </li>
+            <li class="gnav_list arrow-orange">
+              <a href="/campaign/">キャンペーン</a>
+            </li>
+            <li class="gnav_list arrow-orange">
+              <a href="/point/">ポイントを<br class="pc">ためる・使う</a>
+            </li>
+            <li class="gnav_list arrow-orange">
+              <a href="/charge/">チャージ（入金）する</a>
+            </li>
+            <li class="gnav_list arrow-orange">
+              <a href="/service/">各種サービス</a>
+            </li>
+            <li class="sp gnav_list arrow-orange gnav_list-search">
+              <a href="/search_result.php">検索する</a>
+            </li>
+          </ul>
+          <div id="lang" class="header_boxLang">
+            <p class="header_boxLangTitle">Language</p>
+            <ul class="header_boxLangSlider">
+              <li class="header_boxLangSliderList">
+                <a href="/">日本語</a>
+              </li>
+              <li class="header_boxLangSliderList">
+                <a href="/sp/language/en/">English</a>
+              </li>
+              <li class="header_boxLangSliderList">
+                <a href="/sp/language/sc/">中文（简体字）</a>
+              </li>
+              <li class="header_boxLangSliderList">
+                <a href="/sp/language/tc/">中文（繁體字）</a>
+              </li>
+              <li class="header_boxLangSliderList">
+                <a href="/sp/language/kr/">한국어</a>
+              </li>
+              <li class="header_boxLangSliderList">
+                <a href="/sp/language/th/">ภาษาไทย</a>
+              </li>
+              <li class="header_boxLangSliderList">
+                <a href="/sp/language/vi/">Tiếng Việt</a>
+              </li>
+              <li class="header_boxLangSliderList">
+                <a href="/sp/language/ru/">русский</a>
+              </li>
+            </ul>
+            <div class="header_boxLangOverlay header_boxLangOverlay-left"></div>
+            <div class="header_boxLangOverlay header_boxLangOverlay-right"></div>
+          </div>
+        </nav>
+      </header>
+      <div class="header_text">
+        <ul class="header_textBox">
+          <li class="header_textBoxList">全国約84万8千か所(2021年7月現在)で使えます</li>
+        </ul>
+      </div>
+    </div><!-- /header -->
+    <!--
+  /******* LPコンテンツ START *******/
+-->
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+    <div class="l-full bgColor_paleblue">
+      <div class="l-wrap">
+        <nav>
+          <ul class="breadnav">
+            <li class="breadnav-list"><a href="/">ホーム</a></li>
+            <li class="breadnav-list"><a href="/campaign/">キャンペーン</a></li>
+            <li class="breadnav-list">つながるWAON 15th Anniversary × 30th anniversary 美少女戦士セーラームーン</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main class="lp-sailormoon">
+      <section class="lp-kv">
+        <div class="lp-kv_inner">
+          <div class="lp-kv_pcBg"></div>
+          <div class="lp-kv_logo">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/kv_logo01.png" alt="30th anniversary 美少女戦士セーラームーン">
+          </div>
+          <p class="lp-kv_header">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/kv_text01.png" alt="WAON | Apple Pay">
+          </p>
+          <div class="lp-kv_flexBox">
+            <div class="lp-kv_textBox">
+              <h1 class="lp-kv_title">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/kv_text02.png" alt="Apple PayのWAON限定!" class="lp-kv_title_top">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/kv_text03.png" alt="ムーン・クライシス・メイク・アップ! Moon Crisis Make Up! WAON! 2022.7.1(金)〜8.18(木)" class="lp-kv_title_bottom">
+              </h1>
+              <p class="lp-kv_text">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/kv_text04.png" alt="Apple PayのWAONにセーラー戦士たちが７週連続登場！お気に入りの限定デザインカードをダウンロードしよう！">
+              </p>
+            </div>
+            <figure class="lp-kv_figure">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/kv_img01.png" alt="">
+            </figure>
+          </div>
+        </div>
+      </section>
+      <div class="lp-bgWrap">
+        <nav class="lp-info_nav">
+          <ul class="lp-info_list">
+            <li class="lp-info_item">
+              <a href="#linkDesign" class="lp-info_link">限定カードデザイン</a>
+            </li>
+            <li class="lp-info_item">
+              <a href="#linkTwitter" class="lp-info_link">Twitterプレゼントキャンペーン</a>
+            </li>
+            <li class="lp-info_item">
+              <a href="#linkFlow" class="lp-info_link">カードの発行方法</a>
+            </li>
+          </ul>
+        </nav>
+        <h2 class="lp-info_logo">
+          <img src="/asset/img/campaign/20220701sailormooncp/0701/info_logo01.png" alt="つながるWAON 15th Anniversary × 30th anniversary 美少女戦士セーラームーン">
+        </h2>
+        <section class="lp-info">
+          <h3 class="lp-info_head">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/info_text01.png" alt="Apple PayのWAONがセーラー戦士に華麗なる変身！" class="use--pc">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/info_text01.png" alt="Apple PayのWAONがセーラー戦士に華麗なる変身！" class="use--sp">
+          </h3>
+          <p class="lp-info_text">
+            <strong class="lp-yellowText">7週連続</strong>で登場する<strong class="lp-yellowText">限定デザイン</strong>をお見逃しなく!<br>さあ、お気に入りを選んで<br class="use--sp">「Moon Crisis Make Up！ WAON!」 </p>
+          <div class="lp-info_movie">
+            <div class="lp-info_movieInner">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/p6J2Js1Wks0?rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+        <section id="linkDesign" class="lp-design">
+          <h3 class="lp-design_head">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/card_text01.png" alt="美少女戦士セーラームーンWAONをGETしよう！" class="use--pc">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/card_text01.png" alt="美少女戦士セーラームーンWAONをGETしよう！" class="use--sp">
+          </h3>
+          <ul class="lp-design_list">
+            <li class="lp-design_item">
+              <p class="lp-design_headText"> コラボ期間中ダウンロードできる、<br>
+                <strong class="lp-yellowText">スペシャルカード！</strong>
+              </p>
+              <dl class="lp-design_box">
+                <dt class="lp-design_title">
+                  <span class="lp-design_title_inline">スーパーセーラームーン</span>
+                </dt>
+                <dd class="lp-design_time">
+                  <span class="lp-design_time_inlineHead">ダウンロード期間</span><br class="use--sp">
+                  <span class="lp-design_time_inlineText">
+                    <strong class="lp-yellowText">7/1（金）</strong>00：00～<strong class="lp-yellowText">8/18（木）</strong>17：30 </span>
+                </dd>
+                <dd class="lp-design_img">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/card/1_B.png" alt="">
+                </dd>
+                <dd class="lp-design_text use--sp">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/card_text02.svg" alt="発行手数料無料">
+                </dd>
+              </dl>
+              <p class="lp-design_attention use--sp">
+                <small> ※美少女戦士セーラームーンWAONはiPhone限定での発行となっております。 </small>
+              </p>
+            </li>
+            <li class="lp-design_item mod-red">
+              <p class="lp-design_headText"> 7週連続で登場する、<strong class="lp-yellowText">1週間限定</strong>のカード！<br>今週のデザインはこちら！ </p>
+              <dl class="lp-design_box">
+                <dt class="lp-design_title">
+                  <span class="lp-design_title_inline"> スーパーセーラーマーキュリー<br><span>&</span><br>スーパーセーラージュピター </span>
+                </dt>
+                <dd class="lp-design_time">
+                  <span class="lp-design_time_inlineHead">ダウンロード期間</span><br class="use--sp">
+                  <span class="lp-design_time_inlineText">
+                    <strong class="lp-yellowText">7/8（金）</strong>00：00〜<strong class="lp-yellowText">7/14（木）</strong>17：30 </span>
+                </dd>
+                <dd class="lp-design_img">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/card/3_B.png" alt="">
+                </dd>
+                <dd class="lp-design_text">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/card_text02.svg" alt="発行手数料無料">
+                </dd>
+              </dl>
+              <p class="lp-design_attention">
+                <small> ※美少女戦士セーラームーンWAONはiPhone限定での発行となっております。 </small>
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="lp-period">
+          <h2 class="lp-periodTtl"> 美少女戦士セーラームーンWAON<br class="use--sp">ダウンロード（発行期間）について </h2>
+          <div class="lp-periodWrap">
+            <p class="lp-periodTime"> 毎週<strong>金曜日</strong>00：00～翌週<strong>木曜日</strong>17：30 </p>
+            <small class="lp-periodAnnotation"> WAONアプリのダウンロードのタイミングにより、<br class="use--sp">上記期間外でもカード発行が可能な場合があります。 </small>
+            <div class="lp-attentionWrap acdn first-acdn">
+              <h3 class="lp-attentionHead acdn_ttl first-acdn_ttl">
+                <span> 注意点を見る </span>
+              </h3>
+              <ul class="lp-attentionList acdn-target first-acdn-target">
+                <li class="lp-attentionItem"> ・美少女戦士セーラームーンWAONはiPhone限定（iPhone8以降かつiOS15以降）での発行となります。 </li>
+                <li class="lp-attentionItem"> ・美少女戦士セーラームーンWAONの各カードは期間限定での発行となります。期間外での発行はできませんのでご注意ください。 </li>
+                <li class="lp-attentionItem"> ・発行した美少女戦士セーラームーンWAONの各カードの残高を合算することはできません。 </li>
+                <li class="lp-attentionItem"> ・Apple Payに発行できるカード枚数には限りがあります。 </li>
+                <li class="lp-attentionItem"> ・電子マネーWAON会員を退会した場合、発行した美少女戦士セーラームーンWAONはウォレットアプリから削除され、ご利用できなくなりますのでご注意ください。再発行はできません。 </li>
+                <li class="lp-attentionItem"> ・発行した美少女戦士セーラームーンWAONをウォレットアプリから削除した場合、サーバーに美少女戦士セーラームーンWAONが残っていますので、復旧操作することにより、再度ご利用いただけます。 </li>
+                <li class="lp-attentionItem"> ・iPhoneからAndroidへ機種変更した場合、発行した美少女戦士セーラームーンWAONのご利用はできなくなりますので、ご注意ください。 </li>
+                <li class="lp-attentionItem"> ・iPhoneからiPhoneへ機種変更した場合、発行した美少女戦士セーラームーンWAONは新しい機種に引き継いでご利用いただけます。 </li>
+                <li class="lp-attentionItem"> ・Apple PayのWAONの詳細については<a href="https://www.waon.net/service/waonaservice/" target="_blank" rel="noopener" class="lp-annotation_link">WAON公式HP</a>をご参照ください。 </li>
+                <li class="lp-attentionItem"> ・本サービスは予告なく変更、もしくは終了する場合があります。ご了承ください。 </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="lp-download">
+          <h3 class="lp-download_head">「WAONアプリ」をダウンロード</h3>
+          <div class="lp-download_flexBox">
+            <figure class="lp-download_waon">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/icon_waon.svg" alt="WAONアプリ">
+            </figure>
+            <a href="https://apps.apple.com/jp/app/waon%E3%82%A2%E3%83%97%E3%83%AA/id1471075782" class="lp-download_btn" target="_blank">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/icon_apple.svg" alt="App Storeからダウンロード">
+            </a>
+            <figure class="lp-download_qr use--pc">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/qr.svg" alt="ダウンロードQRコード">
+            </figure>
+          </div>
+          <a href="#linkFlow" class="lp-download_link">
+            <span class="lp-download_link_inline"> 美少女戦士セーラームーンWAONの<br class="use--sp">発行方法はこちら </span>
+          </a>
+        </section>
+        <section class="lp-card">
+          <h2 class="lp-cardTtl">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/bottom_txt01_sp.svg" alt="カードデザインは全8種類!毎週更新をお楽しみに!" class="use--sp">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/bottom_txt01_pc.svg" alt="カードデザインは全8種類!毎週更新をお楽しみに!" class="use--pc">
+          </h2>
+          <ul class="lp-cardList">
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/1_A.png" alt="スーパーセーラームーン">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateA.svg" alt="公開中">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-07-01T00:00:00"> 7/1（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-08-18T17:30:00"> 8/18（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/2_B.png" alt="スーパーセーラームーン＆スーパーセーラーちびムーン">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateC.svg" alt="終了">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-07-01T00:00:00"> 7/1（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-07-07T17:30:00"> 7/7（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/3_A.png" alt="スーパーセーラーマーキュリー＆スーパーセーラージュピター">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateA.svg" alt="公開中">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-07-08T00:00:00"> 7/8（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-07-14T17:30:00"> 7/14（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/4_C.png" alt="近日公開">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateB.svg" alt="予告">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-07-15T00:00:00"> 7/15（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-07-21T17:30:00"> 7/21（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/5_C.png" alt="近日公開">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateB.svg" alt="予告">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-07-01T00:00:00"> 7/22（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-08-18T17:30:00"> 7/28（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/6_C.png" alt="近日公開">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateB.svg" alt="予告">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-07-29T00:00:00"> 7/29（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-08-04T17:30:00"> 8/4（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/7_C.png" alt="近日公開">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateB.svg" alt="予告">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-08-05T00:00:00"> 8/5（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-08-11T17:30:00"> 8/11（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+            <li class="lp-cardItem">
+              <figure class="lp-cardFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/card/8_C.png" alt="近日公開">
+              </figure>
+              <div class="lp-cardTxtWrap">
+                <p class="lp-cardSituation">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/stateB.svg" alt="予告">
+                </p>
+                <p class="lp-cardTime">
+                  <time datetime="2022-08-12T00:00:00"> 8/12（金）00：00～<br>
+                  </time>
+                  <time datetime="2022-08-18T17:30:00"> 8/18（木）17：30 </time>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <small class="lp-cardAnnotation"> ※美少女戦士セーラームーンWAONは発行可能期間になりましたらWAONアプリ画面の「WAONを追加」からカード選択画面に表示されます。 </small>
+        </section>
+      </div>
+      <section id="linkTwitter" class="lp-sns">
+        <div class="lp-snsBg">
+          <div class="lp-snsWrap">
+            <h2 class="lp-snsTtl">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/follow01_sp.svg" alt="期間限定 WAON × 美少女戦士セーラームーンの公式アカウントをフォローしよう!" class="use--sp">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/follow01_pc.svg" alt="期間限定 WAON × 美少女戦士セーラームーンの公式アカウントをフォローしよう!" class="use--pc">
+            </h2>
+            <p class="lp-snsAccount"> 限定デザインカードの<br class="use--sp"><strong>最新情報</strong>をお届け中！ </p>
+            <a href="" class="lp-sns_link">
+              <span> Twitter公式アカウントはこちら </span>
+            </a>
+            <div class="lp-snsTxtWrap">
+              <time class="lp-snsTime" datetime="2020-07-29">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/followTxt01.svg" alt="7/29（金）から！">
+              </time>
+              <p class="lp-snsTxt"> Twitterフォロー&リツイートキャンペーン<br class="use--sp">スタート予定！乞うご期待！ </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="lp-bgWrap--bottom">
+        <section class="lp-flow">
+          <h2 id="linkFlow" class="lp-flowTtl">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/bottom_txt02.svg" alt="美少女戦士セーラームーンWAONの発行方法" class="use--sp">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/bottom_txt02_pc.svg" alt="美少女戦士セーラームーンWAONの発行方法" class="use--pc">
+          </h2>
+          <ol class="lp-flowList">
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 1 </div>
+              <p class="lp-flowTxt">
+                <span> 「WAONアプリ」をダウンロード </span>
+              </p>
+              <div class="lp-downLoadIconWrap">
+                <figure class="lp-downLoadFigure_icon">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/icon_waon.svg" alt="WAONアプリ">
+                </figure>
+                <figure class="lp-downLoadFigure_app">
+                  <a href="https://apps.apple.com/jp/app/waon%E3%82%A2%E3%83%97%E3%83%AA/id1471075782" class="lp-downLoadFigure_app_link" target="_blank">
+                    <img src="/asset/img/campaign/20220701sailormooncp/0701/icon_apple.svg" alt="App Storeからダウンロード">
+                  </a>
+                </figure>
+                <figure class="lp-downLoadFigure_qr use--pc">
+                  <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/qr.svg" alt="ダウンロードQRコード">
+                </figure>
+              </div>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 2 </div>
+              <p class="lp-flowTxt"> WAONアプリ<br class="use--sp">起動 </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow01.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 3 </div>
+              <p class="lp-flowTxt"> 利用規約<br class="use--sp">同意 </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow02.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 4 </div>
+              <p class="lp-flowTxt"> SMS認証 </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow03.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 5 </div>
+              <p class="lp-flowTxt"> WAON<br>会員登録 </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow04.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 6 </div>
+              <p class="lp-flowTxt"> セキュリティ<br>設定 </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow05.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 7 </div>
+              <p class="lp-flowTxt"> WAONを新規発行<br><span>(WAONをはじめる)</span>
+              </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow06.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 8 </div>
+              <p class="lp-flowTxt"> お好きな<br>WAONを選択 </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow07.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <div class="lp-flowNo"> 9 </div>
+              <p class="lp-flowTxt"> メインカード<br>設定 </p>
+              <figure class="lp-flowFigure">
+                <img src="/asset/img/campaign/20220701sailormooncp/0701/flow08.png" alt="">
+              </figure>
+            </li>
+            <li class="lp-flowItem">
+              <p class="lp-flowEnd">
+                <span class="lp-safari"> 発行完了 </span>
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="lp-period">
+          <h2 class="lp-periodTtl"> 美少女戦士セーラームーンWAON<br class="use--sp">ダウンロード（発行期間）について </h2>
+          <div class="lp-periodWrap">
+            <p class="lp-periodTime"> 毎週<strong>金曜日</strong>00：00～翌週<strong>木曜日</strong>17：30 </p>
+            <small class="lp-periodAnnotation"> WAONアプリのダウンロードのタイミングにより、<br class="use--sp">上記期間外でもカード発行が可能な場合があります。 </small>
+            <div class="lp-attentionWrap acdn first-acdn">
+              <h3 class="lp-attentionHead acdn_ttl first-acdn_ttl">
+                <span> 注意点を見る </span>
+              </h3>
+              <ul class="lp-attentionList acdn-target first-acdn-target">
+                <li class="lp-attentionItem"> ・美少女戦士セーラームーンWAONはiPhone限定（iPhone8以降かつiOS15以降）での発行となります。 </li>
+                <li class="lp-attentionItem"> ・美少女戦士セーラームーンWAONの各カードは期間限定での発行となります。期間外での発行はできませんのでご注意ください。 </li>
+                <li class="lp-attentionItem"> ・発行した美少女戦士セーラームーンWAONの各カードの残高を合算することはできません。 </li>
+                <li class="lp-attentionItem"> ・Apple Payに発行できるカード枚数には限りがあります。 </li>
+                <li class="lp-attentionItem"> ・電子マネーWAON会員を退会した場合、発行した美少女戦士セーラームーンWAONはウォレットアプリから削除され、ご利用できなくなりますのでご注意ください。再発行はできません。 </li>
+                <li class="lp-attentionItem"> ・発行した美少女戦士セーラームーンWAONをウォレットアプリから削除した場合、サーバーに美少女戦士セーラームーンWAONが残っていますので、復旧操作することにより、再度ご利用いただけます。 </li>
+                <li class="lp-attentionItem"> ・iPhoneからAndroidへ機種変更した場合、発行した美少女戦士セーラームーンWAONのご利用はできなくなりますので、ご注意ください。 </li>
+                <li class="lp-attentionItem"> ・iPhoneからiPhoneへ機種変更した場合、発行した美少女戦士セーラームーンWAONは新しい機種に引き継いでご利用いただけます。 </li>
+                <li class="lp-attentionItem"> ・Apple PayのWAONの詳細については<a href="https://www.waon.net/service/waonaservice/" target="_blank" rel="noopener" class="lp-annotation_link">WAON公式HP</a>をご参照ください。 </li>
+                <li class="lp-attentionItem"> ・本サービスは予告なく変更、もしくは終了する場合があります。ご了承ください。 </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="lp-copyRightWrap">
+          <small class="lp-copyRight">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/copyright01.png" alt="©武内直子・PNP／劇場版「美少女戦士セーラームーン Eternal」製作委員会 ©Naoko Takeuchi">
+          </small>
+        </div>
+      </div>
+    </main>
+    <!--
+  /******* LPコンテンツ END *******/
+-->
+    <!-- ================================
+FOOTER
+===================================== -->
+    <p class="pageTop">
+      <a href="#">
+        <img src="/asset/img/common/btn_pagetop.png" alt="">
+      </a>
+    </p>
+    <!--div class="bnrBox">
+ <a href="javascript:void(0)" class="bnrBox_btnClose"><img src="/asset/img/top/btn_close.png" alt=""></a>
+ <a href="/campaign/191001_cashlesswaoncp/" onclick="ga('send', 'event', 'flt_bnr', 'click', '1910_cashlesswaoncp');">
+  <img class="pc" src="/asset/img/top/bnr_pc.jpg" alt="キャッシュレス・消費者還元事業">
+  <img class="sp" src="/asset/img/top/bnr_sp.jpg" alt="キャッシュレス・消費者還元事業">
+ </a>
+</div-->
+    <!-- ================================
+FOOTER
+===================================== -->
+    <div id="footer" class="l-full">
+      <footer>
+        <div class="footerNavBox">
+          <!-- utilitiesナビゲーション_____________ -->
+          <div class="utilitiesNav l-wrap">
+            <!-- SP ONLY ________________-->
+            <div class="sp">
+              <ul class="sp-utilitiesNav df">
+                <li class="spnav-1 spnavBtn js-spnav-row-1">
+                  <a class="arrow-whitePlus">WAONとは</a>
+                </li>
+                <li class="spOpenList spnav-3">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/about/">WAONとは</a></li>
+                    <li><a class="arrow-orange" href="/about/apply/">WAONを申し込む</a></li>
+                    <li><a class="arrow-orange" href="/about/base/">WAONの基本</a></li>
+                    <li><a class="arrow-orange" href="/about/net-shop/">インターネット上でのお買物について（ネット決済）</a></li>
+                    <!--li><a class="arrow-orange" href="/about/movie/">電子マネーWAONの使い方の動画</a></li-->
+                  </ul>
+                </li>
+                <li class="spnav-2 spnavBtn js-spnav-row-1 sp-utilitiesNav-border">
+                  <a class="arrow-whitePlus">使えるお店を探す</a>
+                </li>
+                <li class="spOpenList spnav-4">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/shop/">使えるお店を探す</a></li>
+                    <li><a class="arrow-orange" href="https://sasp.mapion.co.jp/b/waon/">店舗検索</a></li>
+                    <li><a class="arrow-orange" href="/internet_shop/">WAONで使えるネットショップ・サービスを探す</a></li>
+                    <li><a class="arrow-orange" href="https://map.aeonbank.co.jp/aeonbank/?trcd=g100000744" target="_blank">イオン銀行ATM設置場所</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-5 spnavBtn js-spnav-row-2">
+                  <a class="arrow-white" href="/point_exchange/">提携先のポイントをWAONポイントに交換</a>
+                </li>
+                <li class="spnav-6 spnavBtn js-spnav-row-2 sp-utilitiesNav-border">
+                  <a class="arrow-white" href="/campaign/">キャンペーン</a>
+                </li>
+                <li class="spnav-7 spnavBtn js-spnav-row-3">
+                  <a class="arrow-whitePlus">ポイントをためる・使う</a>
+                </li>
+                <li class="spOpenList spnav-9">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/point/">ポイントをためる・使う</a></li>
+                    <li><a class="arrow-orange" href="/point/expiration_date/">ポイントの有効期限について</a></li>
+                    <li><a class="arrow-orange" href="/point/contribution/">WAONポイントを寄付・募金する</a></li>
+                    <li><a class="arrow-orange" href="/point/management/">WAONポイントを確認する</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-8 spnavBtn js-spnav-row-3 sp-utilitiesNav-border">
+                  <a class="arrow-whitePlus">チャージ（入金）する</a>
+                </li>
+                <li class="spOpenList spnav-10">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/charge/">チャージ（入金）する</a></li>
+                    <li><a class="arrow-orange" href="/charge/cash/">現金でチャージする</a></li>
+                    <li><a class="arrow-orange" href="/charge/credit_card/">クレジットカードでチャージする</a></li>
+                    <li><a class="arrow-orange" href="/charge/aeon_bank_account/">イオン銀行の口座からチャージする</a></li>
+                    <li><a class="arrow-orange" href="/charge/auto/">オートチャージ</a></li>
+                    <li><a class="arrow-orange" href="/point/use/">ポイントからチャージする</a></li>
+                    <li><a class="arrow-orange" href="/service/pocket_change/">外貨からチャージする</a></li>
+                    <li><a class="arrow-orange" href="/charge/upper-bound/">チャージ上限金額の変更について</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-11 spnavBtn js-spnav-row-4">
+                  <a class="arrow-whitePlus">電子マネーWAON会員(所有者情報登録)</a>
+                </li>
+                <li class="spOpenList spnav-13">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/net_station/registration/">電子マネーWAON会員(所有者情報登録)</a></li>
+                    <li><a class="arrow-orange" href="/info/20160000_waonpoint/">WAON POINTサービス会員登録に伴う個人データの共同利用のお知らせ</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-12 spnavBtn js-spnav-row-4 sp-utilitiesNav-border">
+                  <a class="arrow-whitePlus">WAONネットステーションについて</a>
+                </li>
+                <li class="spOpenList spnav-14">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/net_station/">WAONネットステーションについて</a></li>
+                    <li><a class="arrow-orange" href="/net_station/iccardreader/">ICカードリーダライタについて</a></li>
+                    <li><a class="arrow-orange" href="/terminal/net_station/">WAONネットステーションWAON端末について</a></li>
+                    <li><a class="arrow-orange" href="/net_station/registration/">電子マネーWAON会員(所有者情報登録)</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-15 spnavBtn js-spnav-row-5">
+                  <a class="arrow-whitePlus">各種サービス</a>
+                </li>
+                <li class="spOpenList spnav-17">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/service/">各種サービス</a></li>
+                    <li><a class="arrow-orange" href="/service/members/">WAONメンバーズ</a></li>
+                    <li><a class="arrow-orange" href="https://www.aeon.co.jp/NetBranch/pathdivide.do" target="_blank">イオンスクエアメンバー<br>Mypageログイン</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-16 spnavBtn js-spnav-row-5 sp-utilitiesNav-border">
+                  <a class="arrow-white" href="/iphone/">iPhone向け　WAONステーションアプリ</a>
+                </li>
+                <li class="spnav-18 spnavBtn js-spnav-row-6">
+                  <a class="arrow-whitePlus">あなたにあったカードを選んでWAONをはじめよう</a>
+                </li>
+                <li class="spOpenList spnav-20">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/card/">あなたにあったカードを選んでWAONをはじめよう</a></li>
+                    <li><a class="arrow-orange" href="/card/region/">ご当地WAON</a></li>
+                    <li><a class="arrow-orange" href="/card/soccer/">サッカー大好きWAON</a></li>
+                    <li><a class="arrow-orange" href="/card/gg/">G.G WAON</a></li>
+                    <li><a class="arrow-orange" href="/card/jmb/">JMB WAON</a></li>
+                    <li><a class="arrow-orange" href="/card/waon/">WAONカード・WAONカードプラス</a></li>
+                    <li><a class="arrow-orange" href="/card/credit/">クレジットカード一体型</a></li>
+                    <li><a class="arrow-orange" href="/card/cash/">キャッシュカード一体型</a></li>
+                    <li><a class="arrow-orange" href="/card/mobile/">モバイルWAON</a></li>
+                    <li><a class="arrow-orange" href="/card/tie-up/">提携WAONカード</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-19 spnavBtn js-spnav-row-6 sp-utilitiesNav-border">
+                  <a class="arrow-white" href="/waon_app/">WAONサービスアプリ</a>
+                </li>
+                <li class="spnav-21 spnavBtn js-spnav-row-7">
+                  <a class="arrow-white" href="/info/">お知らせ</a>
+                </li>
+                <li class="spnav-22 spnavBtn js-spnav-row-7 sp-utilitiesNav-border">
+                  <a class="arrow-whitePlus">WAON利用約款</a>
+                </li>
+                <li class="spOpenList spnav-23">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/stipulation/">WAON利用約款</a></li>
+                    <li><a class="arrow-orange" href="/stipulation/20000/">上限20,000円 WAON利用約款</a></li>
+                    <li><a class="arrow-orange" href="/stipulation/29000/">上限50,000円(1回のチャージ限度額が29,000円) WAON利用約款</a></li>
+                    <li><a class="arrow-orange" href="/stipulation/49000/">上限50,000円(1回のチャージ限度額が49,000円) WAON利用約款</a></li>
+                    <li><a class="arrow-orange" href="/stipulation/mynapointwaon/">マイナポイント利用規約・マイナポイント特約</a></li>
+                    <li><a class="arrow-orange" href="/stipulation/cashless/">キャッシュレス・消費者還元事業に関する特約</a></li>
+                    <li><a class="arrow-orange" href="https://www.s-kessai.jp/cms/user-protection/detail/80" target="_blank">利用者資金の保全方法・無権限取引への対応方針に関する事項</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-24 spnavBtn js-spnav-row-8">
+                  <a class="arrow-whitePlus">WAON端末について</a>
+                </li>
+                <li class="spOpenList spnav-26">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/terminal/">WAON端末について</a></li>
+                    <!--li><a class="arrow-orange" href="/terminal/charger/">WAONチャージャー</a></li-->
+                    <!--li><a class="arrow-orange" href="/terminal/mobile_app/">モバイルWAON</a></li-->
+                    <li><a class="arrow-orange" href="/terminal/net_station/">WAONネットステーション</a></li>
+                    <li><a class="arrow-orange" href="/terminal/station/">WAONステーション</a></li>
+                    <li><a class="arrow-orange" href="/terminal/aeonbk/">イオン銀行ATM</a></li>
+                    <li><a class="arrow-orange" href="/terminal/chargermini/">WAONチャージャーmini</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-25 spnavBtn js-spnav-row-8 sp-utilitiesNav-border">
+                  <a class="arrow-white" href="/contact/">お問い合わせ</a>
+                </li>
+                <li class="spnav-27 spnavBtn js-spnav-row-9">
+                  <a class="arrow-whitePlus">WAONを紛失・盗難・破損したときは</a>
+                </li>
+                <li class="spOpenList spnav-29">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/rescue/">WAONを紛失・盗難・破損したときは</a></li>
+                    <li><a class="arrow-orange" href="/rescue/pickup/">WAONカードの拾得について</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-28 spnavBtn js-spnav-row-9 sp-utilitiesNav-border">
+                  <a class="arrow-whitePlus">サイトご利用に関して</a>
+                </li>
+                <li class="spOpenList spnav-30">
+                  <ul class="spOpenList_box df">
+                    <li><a class="arrow-orange" href="/site/">サイトご利用に関して</a></li>
+                    <li><a class="arrow-orange" href="/site/browser/">ホームページの推奨環境について</a></li>
+                    <li><a class="arrow-orange" href="/site/company/">企業情報</a></li>
+                    <!--li><a class="arrow-orange" href="/site/mobile/">WAONモバイルサイトについて</a></li-->
+                    <li><a class="arrow-orange" href="/site/policy/">サイトご利用規約</a></li>
+                    <li><a class="arrow-orange" href="/site/sitemap/">サイトマップ</a></li>
+                  </ul>
+                </li>
+                <li class="spnav-31 spnavBtn js-spnav-row-10">
+                  <a class="arrow-white" href="/faq/">よくあるご質問</a>
+                </li>
+                <li class="spnav-32 spnavBtn js-spnav-row-10 sp-utilitiesNav-border">
+                  <a class="arrow-white" href="/movie/">動画ギャラリー</a>
+                </li>
+              </ul>
+            </div>
+            <!-- _______________________ -->
+            <!-- PC ONLY ________________-->
+            <div class="pc pc-df">
+              <!-- WAONを知りたい -->
+              <dl class="links">
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/about/">WAONとは</a></dt>
+                <dd><a href="/about/apply/">WAONを申し込む</a></dd>
+                <dd><a href="/about/base/">WAONの基本</a></dd>
+                <dd><a href="/about/net-shop/">インターネット上でのお買物について（ネット決済）</a></dd>
+                <!--dd><a href="/about/movie/">電子マネーWAONの使い方の動画</a></dd-->
+                <!-- 使えるお店を探す -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/shop/">使えるお店を探す</a></dt>
+                <dd><a href="https://sasp.mapion.co.jp/b/waon/">店舗検索</a></dd>
+                <dd><a href="/internet_shop/">WAONで使えるネットショップ・サービスを探す</a></dd>
+                <dd><a href="https://map.aeonbank.co.jp/aeonbank/?trcd=g100000744" target="_blank">イオン銀行ATM設置場所</a></dd>
+                <!-- 提携ポイントをWAONポイントと交換 -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/point_exchange/">提携先のポイントをWAONポイントに交換</a></dt>
+                <!-- キャンペーン -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/campaign/">キャンペーン</a></dt>
+                <!-- ポイントをつかう・ためる -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/point/">ポイントをためる・使う</a></dt>
+                <dd><a href="/point/expiration_date/">ポイントの有効期限について</a></dd>
+                <dd><a href="/point/contribution/">WAONポイントを寄付・募金する</a></dd>
+                <dd><a href="/point/management/">WAONポイントを確認する</a></dd>
+              </dl>
+              <!-- チャージ（入金）する -->
+              <dl class="links">
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/charge/">チャージ（入金）する</a></dt>
+                <dd><a href="/charge/cash/">現金でチャージする</a></dd>
+                <dd><a href="/charge/credit_card/">クレジットカードでチャージする</a></dd>
+                <dd><a href="/charge/aeon_bank_account/">イオン銀行の口座からチャージする</a></dd>
+                <dd><a href="/charge/auto/">オートチャージ</a></dd>
+                <dd><a href="/point/use/">ポイントからチャージする</a></dd>
+                <dd><a href="/service/pocket_change/">外貨からチャージする</a></dd>
+                <dd><a href="/charge/upper-bound/">チャージ上限金額の変更について</a></dd>
+                <!-- 電子マネーWAON会員(所有者情報登録) -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/net_station/registration/">電子マネーWAON会員<br>(所有者情報登録)</a></dt>
+                <dd><a href="/info/20160000_waonpoint/">WAON POINTサービス会員登録に伴う個人データの共同利用のお知らせ</a></dd>
+                <!-- WAONネットステーション -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/net_station/">WAONネットステーション<br>について</a></dt>
+                <dd><a href="/net_station/iccardreader/">ICカードリーダライタについて</a></dd>
+                <dd><a href="/terminal/net_station/">WAONネットステーションWAON端末について</a></dd>
+                <!-- 各種サービス -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/service/">各種サービス</a></dt>
+                <dd><a href="/service/members/">WAONメンバーズ</a></dd>
+                <dd><a href="https://www.aeon.co.jp/NetBranch/pathdivide.do" target="_blank">イオンスクエアメンバー<br>Mypageログイン</a></dd>
+              </dl>
+              <!-- WAON POINT -->
+              <!--
+      <dt class="links_ttl fwBold"><a class="arrow-orange  arrow-sp-links" href="/waon_point/">WAON POINT</a></dt>
+      <dd><a href="/waon_point/monthly/">月間ご利用ポイント</a></dd>
+      <dd><a href="/waon_point/exchange/">WAON POINTの交換</a></dd>
+      <dd><a href="/waon_point/faq/">WAON POINTのよくあるご質問</a></dd>
+      -->
+              <!-- iPhone向け　WAONステーションアプリ -->
+              <dl class="links">
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/iphone/">iPhone向け　WAONステーションアプリ</a></dt>
+                <!-- あなたにあったカードを選んでWAONをはじめよう -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/card/">あなたにあったカードを選んでWAONをはじめよう</a></dt>
+                <dd><a href="/card/region/">ご当地WAON</a></dd>
+                <dd><a href="/card/soccer/">サッカー大好きWAON</a></dd>
+                <dd><a href="/card/gg/">G.G WAON</a></dd>
+                <dd><a href="/card/jmb/">JMB WAON</a></dd>
+                <dd><a href="/card/waon/">WAONカード・WAONカードプラス</a></dd>
+                <dd><a href="/card/credit/">クレジットカード一体型</a></dd>
+                <dd><a href="/card/cash/">キャッシュカード一体型</a></dd>
+                <dd><a href="/card/mobile/">モバイルWAON</a></dd>
+                <dd><a href="/card/tie-up/">提携WAONカード</a></dd>
+                <!-- WAONサービスアプリ -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/waon_app/">WAONサービスアプリ</a></dt>
+                <!-- お知らせ -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/info/">お知らせ</a></dt>
+                <!-- WAON利用約款 -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/stipulation/">WAON利用約款</a></dt>
+                <dd><a href="/stipulation/20000/">上限20,000円 WAON利用約款</a></dd>
+                <dd><a href="/stipulation/29000/">上限50,000円(1回のチャージ限度額が29,000円) WAON利用約款</a></dd>
+                <dd><a href="/stipulation/49000/">上限50,000円(1回のチャージ限度額が49,000円) WAON利用約款</a></dd>
+                <dd><a href="/stipulation/mynapointwaon/">マイナポイント利用規約・マイナポイント特約</a></dd>
+                <dd><a href="/stipulation/cashless/">キャッシュレス・消費者還元事業に関する特約</a></dd>
+                <dd><a href="https://www.s-kessai.jp/cms/user-protection/detail/80" target="_blank">利用者資金の保全方法・無権限取引への対応方針に関する事項</a></dd>
+              </dl>
+              <!-- WAON端末について -->
+              <dl class="links">
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/terminal/">WAON端末について</a></dt>
+                <!--dd><a href="/terminal/charger/">WAONチャージャー</a></dd-->
+                <!--dd><a href="/terminal/mobile_app/">モバイルWAON</a></dd-->
+                <dd><a href="/terminal/net_station/">WAONネットステーション</a></dd>
+                <dd><a href="/terminal/station/">WAONステーション</a></dd>
+                <dd><a href="/terminal/aeonbk/">イオン銀行ATM</a></dd>
+                <dd><a href="/terminal/chargermini/">WAONチャージャーmini</a></dd>
+                <!-- お問い合わせ -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/contact/">お問い合わせ</a></dt>
+                <!-- WAONを紛失・盗難・破損したときは -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/rescue/">WAONを紛失・盗難・破損したときは</a></dt>
+                <dd><a href="/rescue/pickup/">WAONカードの拾得について</a></dd>
+                <!-- サイトご利用に関して -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/site/">サイトご利用に関して</a></dt>
+                <dd><a href="/site/browser/">ホームページの推奨環境について</a></dd>
+                <dd><a href="/site/company/">企業情報</a></dd>
+                <!--dd><a href="/site/mobile/">WAONモバイルサイトについて</a></dd-->
+                <dd><a href="/site/policy/">サイトご利用規約</a></dd>
+                <dd><a href="/site/sitemap/">サイトマップ</a></dd>
+                <!-- よくあるご質問 -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/faq/">よくあるご質問</a></dt>
+                <!-- 動画ギャラリー -->
+                <dt class="links_ttl fwBold"><a class="arrow-orange arrow-sp-links" href="/movie/">動画ギャラリー</a></dt>
+              </dl>
+            </div>
+            <!-- _______________________ -->
+          </div><!-- /utilitiesNav -->
+        </div>
+        <!-- remoteナビゲーション_____________ -->
+        <!-- <ul class="remoteNav df sp">
+      <li class="remoteNav_li remoteNav_li-left"><a class="btn btn-white" href="/faq/">カード盗難・紛失</a></li>
+        <li class="remoteNav_li remoteNav_li-right"><a class="btn btn-darkblue" href="/faq/">よくあるご質問</a></li>
+    </ul> -->
+        <div class="footerLogoBox">
+          <div class="l-wrap">
+            <!-- footerナビゲーション_____________ -->
+            <div class="footerNav">
+              <ul class="footerNav_list df">
+                <li class="terms pc sp"><a class="footerNav_list_btn" href="#">トップへ戻る</a></li>
+                <li class="company"><a class="footerNav_list_btn" href="/site/company/">企業情報</a>|</li>
+                <li class="privacy"><a class="footerNav_list_btn" href="http://www.aeon.info/privacy/" target="_blank">プライバシーポリシー</a></li>
+                <li class="sitemap"><span class="pc">|</span><a class="footerNav_list_btn" href="/site/sitemap/">サイトマップ</a>|</li>
+                <li class="terms"><a class="footerNav_list_btn" href="/site/">サイトご利用に関して</a></li>
+              </ul>
+              <p class="footerSiteId">
+                <a href="/"><img src="/asset/img/common/img-foot-logo.png" alt="WAON" width="101" height="64"></a>
+              </p>
+            </div>
+            <p class="copy">Copyright(c) AEON CO., LTD. All Right Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- ==
+ JS
+ ======= -->
+    <script type="text/javascript" src="/asset/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="/asset/js/top-function.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.layerBoard.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.floatThead.min.js"></script>
+    <script type="text/javascript" src="/asset/js/function.js"></script>
+    <script type="text/javascript" src="/asset/js/shop.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.lazyload.min.js?1"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('.l-full img').not('.heading2_serviceApp_logo img').not('.serviceApp_box img').not('.modal-close img').not('.noLazyLoad').not('.noLazyLoad img').each(function() {
+          $url = $(this).attr("src");
+          // $(this).attr("src","");
+          $(this).attr("data-original", $url);
+        });
+        // let images = document.querySelectorAll('.l-full img');
+        // lazyload(images,{
+        //     effect: "fadeIn",
+        //    effectspeed: 500
+        //  });
+        //   });
+        // $('.l-full img').lazyload({
+        //    effect: "fadeIn",
+        //    effectspeed: 500
+        // });
+        // $('.l-full img').not('.sp').lazyload({
+        //    effect: "fadeIn",
+        //    effectspeed: 500
+        // });
+        resizeWidth = $(window).width();
+        var isPc = false
+        if (resizeWidth > 767) {
+          isPc = true
+          $('.l-full img').not('.sp').not('.heading2_serviceApp_logo img').not('.serviceApp_box img').not('.modal-close img').not('.noLazyLoad').not('.noLazyLoad img').lazyload({
+            effect: "fadeIn",
+            effectspeed: 500,
+            threshould: 19999
+          });
+        } else {
+          isPc = false
+          $('.l-full img').not('.pc').lazyload({
+            effect: "fadeIn",
+            effectspeed: 500,
+            threshould: 19999
+          });
+        }
+        window.addEventListener('resize', function() {
+          console.log('aaa');
+          resizeWidth = $(window).width();
+          if (resizeWidth > 767 && isPc == false) {
+            // console.log('bbb');
+            // window.setTimeout(function () {
+            //     location.reload();
+            // }, 1)
+            location.href = location.href;
+          } else if (resizeWidth <= 768 && isPc == true) {
+            console.log('ccc');
+            // window.setTimeout(function () {
+            //     location.reload();
+            // }, 1)
+            location.href = location.href;
+          }
+        })
+        // $(window).on('resize', function() {
+        // });
+      });
+    </script>
+    <script src="//c.marsflag.com/mf/mfx/1.0/js/mfx-sbox.js" charset="UTF-8"></script>
+  </div>
+</body>
+</html>

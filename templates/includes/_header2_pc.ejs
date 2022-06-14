@@ -1,0 +1,167 @@
+<body class="top  topH1" id="element">
+<div class="l-ofhidden">
+    <!-- ================================
+HEADER
+===================================== -->
+<div id="header" class="l-full">
+<header>
+<!-- ロゴ -->
+  <div id="headerNav" class="l-wrap header">
+    <div class="header_box df header_box-title">
+      <div class="header_boxInner cFix">
+        <p id="headerTitle" class="header_boxInnerTitle header_boxInnerTitle-main">
+          <a href="/">
+            <img src="/asset/img/common/img-head-logo.png?d200513" alt="WAON">
+          </a>
+        </p>
+        <div class="header_boxInnerTitle header_boxInnerTitle-sub">
+          <p class="header_boxInnerTitleText">全国約84万8千か所<br>(2021年7月現在)で<br>使えます</p>
+        </div>
+
+        <div class="header_boxOption">
+          <ul class="header_boxOptionNav df cFix">
+            <li class="header_boxOptionNavList">
+              <a class="header_boxOptionNavListInner header_boxOptionNavListInner-orange arrow-orange" href="/rescue/">盗難・紛失・<br class="sp">破損の際に</a>
+            </li>
+            <li class="header_boxOptionNavList">
+              <a class="header_boxOptionNavListInner arrow-blue" href="/faq/">よくある<br class="sp">ご質問</a>
+            </li>
+            <!-- pc時のみ -->
+            <li id="searchBtn" class="header_boxOptionNavList header_boxOptionNavList-search">検索</li>
+            <!-- / pc時のみ -->
+          </ul>
+          <div class="header_boxOptionLang">
+            <ul class="header_boxOptionLangInner cFix">
+              <li class="header_boxOptionLangInnerList">Language</li>
+              <li class="header_boxOptionLangInnerList header_boxOptionLangInnerList-select">
+                <select class="lang">
+                  <option val="jp">日本語</option>
+                  <option val="en">English</option>
+                  <option val="sc">中文（简体字）</option>
+                  <option val="tc">中文（繁體字）</option>
+                  <option val="kr">한국어</option>
+                  <option val="th">ภาษาไทย</option>
+                  <option val="vi">Tiếng Việt</option>
+                  <option val="ru">русский</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="searchBox" class="searchBox">
+        <div class="searchBox_inner">
+<!--
+          <form method="get" action="http://sitesearch.waon.net/ja_waon/search.x">
+            <input type="search" placeholder="サイト内検索" name="q" value="" id="MF_form_phrase" autocomplete="off">
+            <button type="submit">検索</button>
+<input type="hidden" name="ie" value="utf8" />
+<input type="hidden" name="page" value="1" />
+<input type="hidden" name="site" value="" />
+          </form>
+-->
+
+<!--MARSFINDERここから-->
+<div class="mf_finder_header">
+<!-- ↓検索窓用カスタムエレメント -->
+<!--<mf-search-box submit-text="" ajax-url="//sitesearch.waon.net/ja_waon/x_search.x" serp-url="//renewal.waon-nx.t-bunka.biz/search_result.php#/" doctype-hidden options-hidden></mf-search-box>-->
+<!--テスト用
+<mf-search-box submit-text="" ajax-url="//mf2demo.marsflag.com/waon_test/x_search.x" serp-url="//renewal.waon-nx.t-bunka.biz/search_result.php#/" doctype-hidden options-hidden></mf-search-box>
+-->
+<!--本番用-->
+<mf-search-box submit-text="" ajax-url="//mf2apr01.marsflag.com/aeon__ja_waon__customelement/x_search.x" serp-url="//www.waon.net/search_result.php#/" doctype-hidden options-hidden></mf-search-box>
+</div>
+<!--MARSFINDERここまで-->
+
+          <p id="searchClose" class="searchBox_close">閉じる</p>
+        </div>
+      </div>
+
+      <div id="hamburgerBtn" class="header_boxInner hamburger">
+        <ul class="hamburger_line">
+          <li class="hamburger_lineList hamburger_lineList-top"></li>
+          <li class="hamburger_lineList hamburger_lineList-middle"></li>
+          <li class="hamburger_lineList hamburger_lineList-bottom"></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- headerNav -->
+
+  <nav id="hamburgerMenu" class="header_box header_box-nav">
+      <ul class="l-wrap header_boxMenu gnav df">
+        <li class="gnav_list arrow-orange">
+          <a href="/about/">WAONとは</a>
+        </li>
+        <li class="gnav_list arrow-orange">
+          <a href="/shop/">使えるお店を探す</a>
+        </li>
+        <li class="gnav_list arrow-orange">
+          <a href="/point_exchange/">提携先のポイントを<br>WAONポイントに交換</a>
+        </li>
+        <li class="gnav_list arrow-orange">
+          <a href="/campaign/">キャンペーン</a>
+        </li>
+        <li class="gnav_list arrow-orange">
+          <a href="/point/">ポイントを<br class="pc">ためる・使う</a>
+        </li>
+        <li class="gnav_list arrow-orange">
+          <a href="/charge/">チャージ（入金）する</a>
+        </li>
+        <li class="gnav_list arrow-orange">
+          <a href="/service/">各種サービス</a>
+        </li>
+        <li class="sp gnav_list arrow-orange gnav_list-search">
+          <a href="/search_result.php">検索する</a>
+        </li>
+      </ul>
+      <div id="lang" class="header_boxLang">
+        <p class="header_boxLangTitle">Language</p>
+        <ul class="header_boxLangSlider">
+          <li class="header_boxLangSliderList">
+            <a href="/">日本語</a>
+          </li>
+          <li class="header_boxLangSliderList">
+            <a href="/sp/language/en/">English</a>
+          </li>
+          <li class="header_boxLangSliderList">
+            <a href="/sp/language/sc/">中文（简体字）</a>
+          </li>
+          <li class="header_boxLangSliderList">
+            <a href="/sp/language/tc/">中文（繁體字）</a>
+          </li>
+          <li class="header_boxLangSliderList">
+            <a href="/sp/language/kr/">한국어</a>
+          </li>
+          <li class="header_boxLangSliderList">
+            <a href="/sp/language/th/">ภาษาไทย</a>
+          </li>
+          <li class="header_boxLangSliderList">
+            <a href="/sp/language/vi/">Tiếng Việt</a>
+          </li>
+          <li class="header_boxLangSliderList">
+            <a href="/sp/language/ru/">русский</a>
+          </li>
+        </ul>
+        <div class="header_boxLangOverlay header_boxLangOverlay-left"></div>
+        <div class="header_boxLangOverlay header_boxLangOverlay-right"></div>
+      </div>
+    </nav>
+</header>
+
+<div class="header_text">
+  <ul class="header_textBox">
+    <li class="header_textBoxList">全国約84万8千か所(2021年7月現在)で使えます</li>
+  </ul>
+</div> 
+</div><!-- /header -->  
+
+
+
+
+
+
+
+<!--
+  /******* LPコンテンツ START *******/
+-->

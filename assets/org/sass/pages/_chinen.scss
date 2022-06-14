@@ -1,0 +1,1014 @@
+.lp- {
+  &card {
+    position: relative;
+    margin-top: getSize(75, 750) + "vw";
+    padding-bottom: getSize(117, 750) + "vw";
+    @include media(sp, min) {
+      margin-top: 63px;
+      padding-bottom: 116px;
+    }
+  }
+
+  &cardTtl {
+    width: getSize(636, 750) + "vw";
+    margin: 0 auto;
+    @include media(sp, min) {
+      width: 868px;
+    }
+  }
+
+  &cardList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include media(sp, min) {
+      width: 1200px;
+      margin: 10px auto 0;
+    }
+  }
+
+  &cardItem {
+    width: calc(100% / 2);
+
+    @include media(sp, min) {
+      width: calc(100% / 4 - 10px);
+    }
+    // sp
+    @include media(sp, max) {
+      &:nth-child(even) {
+        transform: translateX(getSize(-16, 375) + "%");
+      }
+
+      &:nth-child(odd) {
+        transform: translateX(getSize(4, 375) + "%");
+      }
+
+      &:nth-child(n + 3) {
+        margin-top: getSize(2, 750) + "vw";
+      }
+    }
+
+    // pc
+    @include media(sp, min) {
+      &:nth-child(4n + 1) {
+        transform: translateX(20px);
+      }
+
+      &:nth-child(4n + 2) {
+        transform: translateX(7px);
+      }
+      &:nth-child(4n + 3) {
+        transform: translateX(-7px);
+      }
+      &:nth-child(4n) {
+        transform: translateX(-20px);
+      }
+      &:nth-child(n + 5) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &cardFigure {
+    width: getSize(388, 375) + "%";
+    @include media(sp, min) {
+      width: 290px;
+    }
+  }
+
+  &cardTime {
+    font-size: getSize(22, 750) + "vw";
+    line-height: lh(28, 22);
+    color: #fff;
+    margin-left: getSize(14, 375) + "%";
+    display: block;
+    transform: rotate(0.03deg);
+    @include media(sp, min) {
+      margin-left: 11px;
+      font-size: 16px;
+      line-height: lh(20, 16);
+    }
+  }
+
+  &cardSituation {
+    width: getSize(80, 375) + "%";
+    margin-left: getSize(30, 375) + "%";
+    @include media(sp, min) {
+      margin-left: 0;
+      width: 61px;
+    }
+  }
+
+  &cardTxtWrap {
+    display: flex;
+    margin-top: getSize(-14, 375) + "%";
+    @include media(sp, min) {
+      margin-top: -6px;
+      margin-left: 20px;
+      width: 250px;
+    }
+  }
+
+  &cardAnnotation {
+    width: getSize(662, 750) + "%";
+
+    font-size: getSize(22, 759) + "vw";
+    line-height: lh(33, 22);
+    color: #fff;
+    display: block;
+    @include textJustify;
+    margin: getSize(45, 750) + "%" auto 0;
+    transform: rotate(0.03deg);
+
+    @include media(sp, max) {
+      text-indent: -1em;
+      padding-left: 1em;
+    }
+
+    @include media(sp, min) {
+      font-size: 14px;
+      line-height: lh(24, 14);
+      text-align: center;
+      margin-top: 24px;
+    }
+  }
+
+  //   sns
+  &sns {
+    position: relative;
+    background: linear-gradient(
+      35deg,
+      #f0b672 9.2652%,
+      #f9e3af 31.085%,
+      #fcecd8 50.3252%,
+      #f9e3af 68.5138%,
+      #f0b672 89.3947%
+    );
+
+    &:before,
+    &:after {
+      @include after;
+
+      background: linear-gradient(
+        48deg,
+        #e75297 21%,
+        #f6c8dd 39.3643%,
+        #e75297 65.3774%
+      );
+
+      width: 100%;
+      height: getSize(10, 750) + "vw";
+
+      @include media(sp, min) {
+        height: 5px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &snsWrap {
+    position: relative;
+    padding-bottom: getSize(1085, 750) + "vw";
+
+    @include media(sp, min) {
+      padding-bottom: 84px;
+    }
+  }
+
+  &snsBg {
+    position: relative;
+    background: url(/asset/img/campaign/20220701sailormooncp/0701/repeat01.png)
+      repeat center center/25% auto;
+    @include media(sp, min) {
+      background: url(/asset/img/campaign/20220701sailormooncp/0701/repeat01.png)
+        repeat center center / 120px auto;
+    }
+    &::before {
+      content: "";
+      display: block;
+      background: url(/asset/img/campaign/20220701sailormooncp/0701/snsDeco01.png)
+        no-repeat center center/100% auto;
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 100%;
+      height: getSize(190, 750) + "vw";
+
+      @include media(sp, min) {
+        background: url(/asset/img/campaign/20220701sailormooncp/0701/snsDeco02.png)
+          no-repeat center center/1200px auto;
+        height: 156px;
+      }
+    }
+  }
+
+  &snsTtl {
+    @include media(sp, max) {
+      width: 100.8%;
+      position: absolute;
+      top: 51%;
+      left: 51.4%;
+      transform: translate(-50%, -50%);
+    }
+    @include media(sp, min) {
+      width: 1124px;
+      padding-top: 84px;
+      margin: 0 auto;
+      transform: translateX(11px);
+    }
+  }
+
+  &snsAccount {
+    font-size: getSize(30, 750) + "vw";
+    line-height: lh(40, 30);
+    color: #fff;
+    font-weight: 700;
+    width: getSize(300, 750) + "%";
+    position: absolute;
+    top: getSize(460, 750) + "vw";
+    left: 50%;
+    transform: translateX(-50%);
+    @include textJustify;
+    text-align: center;
+    white-space: noWrap;
+    text-shadow: 0 0 getSize(6, 750) + "vw" rgb(0 0 0 / 40%);
+    @include media(sp, min) {
+      text-shadow: 0 0 6px rgb(0 0 0 / 40%);
+    }
+
+    strong {
+      color: #fcee21;
+    }
+
+    @include media(sp, min) {
+      font-size: 22px;
+      top: 318px;
+      letter-spacing: 0.045em;
+    }
+  }
+
+  &sns_link {
+    font-size: getSize(35, 750) + "vw";
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    border-radius: getSize(60, 750) + "vw";
+    width: getSize(600, 750) + "%";
+    background: linear-gradient(
+      to right,
+      #e4006e 0%,
+      #ed86b3 41.5183%,
+      #e4006e 99.3774%
+    );
+    position: absolute;
+    top: getSize(559, 750) + "vw";
+    left: 50%;
+    transform: translateX(-50%);
+    height: getSize(114, 750) + "vw";
+    box-shadow: 4px 4px 3px rgb(15 0 68 / 40%);
+    @include media(sp, min) {
+      top: 364px;
+      width: 570px;
+      font-size: 24px;
+      height: 70px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background: url(/asset/img/campaign/20220701sailormooncp/0701/triangle02.svg)
+        no-repeat center center/100% auto;
+      width: getSize(18, 750) + "vw";
+      height: getSize(18, 750) + "vw";
+      position: absolute;
+
+      top: 50%;
+      transform: translateY(-50%);
+      right: getSize(45, 750) + "vw";
+
+      @include media(sp, min) {
+        width: 12px;
+        height: 12px;
+        right: 106px;
+      }
+    }
+
+    span {
+      transform: translateX(9.5%);
+      letter-spacing: -0.066em;
+      @include media(sp, min) {
+        transform: translateX(35.5%);
+      }
+    }
+  }
+
+  &snsTxtWrap {
+    @include media(sp, min) {
+      display: flex;
+      width: 914px;
+      margin: 0 auto;
+      position: absolute;
+      top: 504px;
+      left: 50%;
+      transform: translateX(-50%);
+      align-items: center;
+    }
+  }
+
+  &snsTime {
+    display: block;
+    @include media(sp, max) {
+      position: absolute;
+      top: getSize(770, 750) + "vw";
+      left: 50%;
+      transform: translateX(-50%);
+      width: getSize(288, 750) + "%";
+    }
+
+    @include media(sp, min) {
+      width: 184px;
+      transform: translateX(7px);
+    }
+  }
+
+  &snsTxt {
+    color: #fff;
+    line-height: 1.4875;
+    font-weight: 700;
+    letter-spacing: -0.053em;
+
+    text-shadow: 0 0 getSize(5, 750) + "vw" rgb(58 0 29 / 50%);
+    @include media(sp, min) {
+      text-shadow: 0 0 5px rgb(58 0 29 / 50%);
+    }
+
+    @include media(sp, max) {
+      font-size: getSize(32, 750) + "vw";
+      color: #fff;
+      line-height: 1.4875;
+      font-weight: 700;
+      text-align: center;
+      width: getSize(688, 750) + "%";
+      position: absolute;
+      top: getSize(830, 750) + "vw";
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include media(sp, min) {
+      font-size: 24px;
+      padding-left: 18px;
+      white-space: noWrap;
+    }
+  }
+
+  //   flow
+
+  &flow {
+    position: relative;
+    padding-top: getSize(95, 750) + "%";
+    @include media(sp, min) {
+      padding-top: 97px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background: url(/asset/img/campaign/20220701sailormooncp/0701/flow_border01.gif)
+        no-repeat center center/100% auto;
+      height: getSize(2, 750) + "vw";
+      width: getSize(671, 750) + "%";
+      position: absolute;
+      top: getSize(596, 750) + "vw";
+      left: 50%;
+      transform: translateX(-50%);
+      @include media(sp, min) {
+        content: none;
+      }
+    }
+  }
+  &flowTtl {
+    width: getSize(666, 750) + "%";
+    margin: 0 auto;
+    position: relative;
+    @include media(sp, min) {
+      width: 869px;
+    }
+  }
+
+  &flowList {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    width: getSize(670, 750) + "%";
+    margin: 0 auto;
+    @include media(sp, min) {
+      width: 1080px;
+      margin: 0 auto;
+    }
+    &::before {
+      content: "";
+      display: block;
+      background: url(/asset/img/campaign/20220701sailormooncp/0701/flow_border01.gif)
+        no-repeat center center/100% auto;
+      height: getSize(2, 750) + "vw";
+
+      width: 100%;
+      position: absolute;
+      top: getSize(865, 750) + "vw";
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include media(sp, min) {
+        background: url(/asset/img/campaign/20220701sailormooncp/0701/flow_border02.gif)
+          no-repeat center center/100% auto;
+        top: 326px;
+        width: 100%;
+        height: 3px;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      background: url(/asset/img/campaign/20220701sailormooncp/0701/flow_border01.gif)
+        no-repeat center center/100% auto;
+      height: getSize(2, 750) + "vw";
+      width: 100%;
+      position: absolute;
+      top: getSize(1373, 750) + "vw";
+      left: 50%;
+      transform: translateX(-50%);
+      @include media(sp, min) {
+        content: none;
+      }
+    }
+  }
+
+  &flowItem {
+    &:first-child {
+      width: 100%;
+      margin: getSize(40, 750) + "%" auto 0 !important;
+
+      @include media(sp, min) {
+        width: 528px;
+        margin: 25px auto 0 0 !important;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          background: url(/asset/img/campaign/20220701sailormooncp/0701/triangle01.svg)
+            no-repeat center center/100% auto;
+          position: absolute;
+          width: 13px;
+          height: 15px;
+          right: -18px;
+          top: 158px;
+        }
+      }
+
+      .lp-flowNo {
+        width: getSize(750, 750) + "%";
+        @include media(sp, min) {
+          width: 528px;
+          height: 20px;
+        }
+      }
+
+      .lp-flowTxt {
+        font-size: getSize(36, 750) + "vw";
+        color: #fff;
+        font-weight: 700;
+        width: getSize(560, 750) + "vw";
+        margin: getSize(40, 750) + "vw" auto 0;
+        text-align: center;
+        position: relative;
+        letter-spacing: -0.022em;
+        transform: rotate(0.03deg);
+        span {
+          text-shadow: getSize(4, 750) + "vw" getSize(4, 750) + "vw"
+            getSize(3, 750) + "vw" rgb(15 0 68 / 40%);
+
+          @include media(sp, min) {
+            text-shadow: 4px 4px 3px rgb(15 0 68 / 40%);
+          }
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          background: url(/asset/img/campaign/20220701sailormooncp/0701/snsDeco03.png)
+            no-repeat center center/100% auto;
+          position: absolute;
+          top: getSize(5, 750) + "vw";
+          left: 50%;
+          transform: translateX(-50%);
+          width: getSize(587, 750) + "vw";
+          height: getSize(26, 750) + "vw";
+
+          @include media(sp, min) {
+            top: -4px;
+            width: 333px;
+            height: 26px;
+          }
+        }
+
+        @include media(sp, min) {
+          font-size: 20px;
+          margin: 67px auto 0;
+          width: 333px;
+        }
+      }
+    }
+
+    &:nth-child(n + 2) {
+      width: calc((100% - #{getSize(52, 750)+"vw"} - 1px) / 3);
+      margin-top: getSize(106, 750) + "vw" !important;
+
+      @include media(sp, max) {
+        margin: 0 getSize(13, 750) + "vw";
+      }
+
+      // pc
+      @include media(sp, min) {
+        width: 160px;
+        margin-top: 25px !important;
+        margin-left: 24px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          background: url(/asset/img/campaign/20220701sailormooncp/0701/triangle01.svg)
+            no-repeat center center/100% auto;
+          position: absolute;
+          width: 13px;
+          height: 15px;
+          right: -18px;
+          top: 158px;
+        }
+      }
+      .lp-flowTxt {
+        font-size: getSize(26, 750) + "vw";
+        line-height: lh(33, 26);
+        color: #fff;
+        height: getSize(80, 750) + "vw";
+        margin: getSize(14, 750) + "vw" auto 0;
+        white-space: noWrap;
+        text-align: center;
+        transform: rotate(0.03deg);
+        @include media(sp, min) {
+          font-size: 16px;
+          height: 35px;
+          margin: 11px auto 0;
+        }
+
+        span {
+          font-size: getSize(24, 750) + "vw";
+          @include media(sp, min) {
+            font-size: 16px;
+          }
+        }
+      }
+      .lp-flowFigure {
+        width: getSize(146, 205) + "%";
+        margin: 0 auto;
+        @include media(sp, min) {
+          width: 103px;
+        }
+      }
+    }
+
+    @include media(sp, max) {
+      &:nth-child(n + 5) {
+        margin-top: getSize(93, 750) + "vw" !important;
+      }
+    }
+
+    // pcの時のみ
+    @include media(sp, min) {
+      &:nth-child(5) {
+        margin-left: 0 !important;
+      }
+      &:nth-child(n + 5) {
+        margin-top: 64px !important;
+        margin-left: 24px;
+        &::before {
+          top: 182px;
+        }
+
+        .lp-flowFigure {
+          margin-top: 20px;
+        }
+      }
+    }
+    // スマホのみ
+    @include media(sp, max) {
+      &:nth-child(3n + 2) {
+        margin-left: 0;
+        margin-right: getSize(13, 750) + "vw";
+        position: relative;
+        &:before {
+          @include after;
+          background: url(/asset/img/campaign/20220701sailormooncp/0701/triangle01.svg)
+            no-repeat center center/100% auto;
+          position: absolute;
+          width: getSize(25, 750) + "vw";
+          height: getSize(30, 750) + "vw";
+          right: getSize(-22, 750) + "vw";
+          top: getSize(257, 750) + "vw";
+        }
+      }
+      &:nth-child(3n) {
+        position: relative;
+        &:before {
+          @include after;
+          background: url(/asset/img/campaign/20220701sailormooncp/0701/triangle01.svg)
+            no-repeat center center/100% auto;
+          position: absolute;
+          width: getSize(25, 750) + "vw";
+          height: getSize(30, 750) + "vw";
+          right: getSize(-22, 750) + "vw";
+          top: getSize(257, 750) + "vw";
+        }
+      }
+      &:nth-child(3n + 1) {
+        margin-right: 0;
+        margin-left: getSize(13, 750) + "vw";
+      }
+    }
+
+    // pcの時消す
+    &:nth-child(4) {
+      &::before {
+        content: none !important;
+      }
+    }
+
+    &:nth-child(6) {
+      .lp-flowFigure {
+        transform: translateY(getSize(50, 178) + "%");
+      }
+    }
+
+    &:nth-child(8) {
+      &::after {
+        content: "";
+        display: block;
+        background: url(/asset/img/campaign/20220701sailormooncp/0701/flow_deco01.png)
+          no-repeat center center/100% auto;
+        width: getSize(208, 750) + "vw";
+        height: getSize(100, 750) + "vw";
+        position: absolute;
+        top: getSize(150, 750) + "vw";
+        left: 0;
+        @include media(sp, min) {
+          width: 146px;
+          height: 100px;
+          position: absolute;
+          top: 93px;
+          left: 7px;
+        }
+      }
+    }
+
+    &:last-child {
+      &::before {
+        content: none !important;
+      }
+      .lp-flowEnd {
+        background-color: #e75297;
+        width: getSize(190, 750) + "vw";
+        margin: 0 0 0 auto;
+        font-size: getSize(58, 750) + "vw";
+        color: #fff;
+        font-weight: 700;
+        border-radius: getSize(25, 750) + "vw";
+        display: flex;
+        justify-content: center;
+        writing-mode: vertical-rl;
+        align-items: center;
+
+        letter-spacing: 0.172em;
+        height: getSize(415, 750) + "vw";
+        position: relative;
+        white-space: noWrap;
+
+        @include media(sp, min) {
+          font-size: 40px;
+          width: 149px;
+          margin-left: 10px;
+          border-radius: 10px;
+          height: 294px;
+          &::before {
+            content: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  &flowNo {
+    background-color: #e75297;
+    font-size: getSize(24, 750) + "vw";
+    border-radius: getSize(50, 750) + "vw";
+    height: getSize(30, 750) + "vw";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #fff;
+    transform: rotate(0.03deg);
+    @include media(sp, min) {
+      width: 160px;
+      height: 20px;
+      font-size: 16px;
+    }
+  }
+
+  &downLoadIconWrap {
+    display: flex;
+    justify-content: center;
+    width: getSize(500vw);
+    margin: getSize(26, 750) + "vw" auto 0;
+    @include media(sp, min) {
+      width: 457px;
+      margin: 17px auto 0;
+      justify-content: space-between;
+    }
+  }
+
+  &downLoadFigure_icon {
+    width: getSize(128, 500) + "%";
+    margin-right: getSize(13, 500) + "%";
+    @include media(sp, min) {
+      width: 90px;
+      margin-right: 0;
+    }
+  }
+
+  &downLoadFigure_app {
+    width: getSize(348, 500) + "%";
+    margin-left: getSize(13, 500) + "%";
+    @include media(sp, min) {
+      width: 244px;
+      margin-left: 0;
+    }
+  }
+
+  &downLoadFigure_qr {
+    @include media(sp, min) {
+      width: 90px;
+    }
+  }
+
+  &period {
+    position: relative;
+
+    width: getSize(680, 750) + "%";
+    margin: getSize(93, 750) + "%" auto 0;
+
+    @include media(sp, min) {
+      margin: 77px auto 0;
+      width: 1080px;
+    }
+  }
+
+  &periodWrap {
+    border: 1px solid #fffad9;
+    border-radius: 0 0 getSize(40, 750) + "vw" getSize(40, 750) + "vw";
+    background-color: rgba(0, 56, 84, 0.4);
+    padding-bottom: getSize(20, 750) + "vw";
+    margin-top: -1px;
+
+    @include media(sp, min) {
+      border-radius: 0 0 20px 20px;
+      padding-bottom: 15px;
+    }
+  }
+
+  &periodTtl {
+    background-color: #fffad9;
+    font-size: getSize(36, 750) + "vw";
+    line-height: 1.4;
+    height: getSize(147, 750) + "vw";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #003854;
+    font-weight: 700;
+    text-align: center;
+    border-radius: getSize(40, 750) + "vw" getSize(40, 750) + "vw" 0 0;
+    @include media(sp, min) {
+      font-size: 22px;
+      height: 57px;
+      border-radius: 15px 15px 0 0;
+    }
+  }
+
+  &periodTime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: getSize(620, 680) + "%";
+    height: getSize(60, 750) + "vw";
+    margin: getSize(42, 680) + "%" auto 0;
+    font-weight: 700;
+    background-color: #fffad9;
+    font-size: getSize(28, 750) + "vw";
+    border-radius: 50px;
+    color: #003854;
+    transform: rotate(0.03deg);
+    strong {
+      color: #e75297;
+    }
+    @include media(sp, min) {
+      font-size: 18px;
+      width: 1000px;
+      height: 41px;
+      margin: 45px auto 0;
+    }
+  }
+
+  &periodAnnotation {
+    font-size: getSize(24, 750) + "vw";
+    line-height: lh(38, 26);
+    color: #fff;
+    display: block;
+    width: getSize(577, 680) + "%";
+    margin: getSize(20, 680) + "%" auto 0;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    transform: rotate(0.03deg);
+    @include media(sp, max) {
+      padding-left: 1em;
+      text-indent: -2.7em;
+    }
+
+    white-space: noWrap;
+    @include media(sp, min) {
+      @include textJustify;
+      margin: 22px auto 0;
+      font-size: 20px;
+      transform: translateX(-5px) rotate(0.03deg);
+      width: 990px;
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      background: url(/asset/img/campaign/20220701sailormooncp/0701/triangle03.svg)
+        no-repeat center center/100% auto;
+      width: getSize(27, 750) + "vw";
+      height: getSize(24, 750) + "vw";
+      transform: translateY(1px);
+      @include media(sp, min) {
+        transform: translateY(3px);
+        width: 27px;
+        height: 24px;
+      }
+    }
+  }
+
+  &attentionWrap {
+    width: getSize(620, 680) + "%";
+    margin: getSize(40, 680) + "%" auto getSize(40, 680) + "%";
+
+    @include media(sp, min) {
+      width: 1000px;
+      margin: 28px auto 27px;
+    }
+
+    .acdn_ttl {
+      background-color: transparent !important;
+    }
+  }
+
+  &attentionHead {
+    font-size: getSize(24, 750) + "vw" !important;
+    font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+      Meiryo, sans-serif;
+    color: #fff !important;
+    height: getSize(76, 750) + "vw" !important;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #d2d2d2 !important;
+    border-bottom: 1px solid #d2d2d2 !important;
+    padding: 0 !important;
+    letter-spacing: 0.083em;
+    span {
+      @include media(sp, max) {
+        transform: translateX(getSize(14, 156) + "%") rotate(0.03deg);
+      }
+    }
+
+    &.acdn_ttl {
+      padding: 0;
+      margin: 0;
+
+      &::after {
+        background: url(/asset/img/campaign/20220701sailormooncp/0701/annotation_cross02.gif)
+          no-repeat center center/100% auto;
+        content: "" !important;
+        color: #fff !important;
+        width: getSize(20, 750) + "vw";
+        height: getSize(20, 750) + "vw";
+        right: getSize(20, 750) + "vw";
+        bottom: getSize(0, 750) + "vw";
+        @include media(sp, min) {
+          bottom: -3px;
+          right: 6px;
+          width: 13.5px;
+          height: 13.5px;
+        }
+      }
+    
+    }
+
+    &.js-acdnOpen {
+      &::after {
+        background: url(/asset/img/campaign/20220701sailormooncp/0701/annotation_cross01.gif)
+          no-repeat center center/100% auto;
+        @include media(sp, min) {
+          bottom: -3px;
+          right: 6px;
+          width: 13.5px;
+          height: 13.5px;
+        }
+      }
+    }
+
+    @include media(sp, min) {
+      height: 54px !important;
+      padding-left: 2px !important;
+      font-size: 16px !important;
+      transform: rotate(0.03deg);
+    }
+  }
+
+  &attentionList {
+    margin-top: getSize(25, 680) + "%";
+    -webkit-text-size-adjust: none;
+    @include media(sp, min) {
+      margin-top: 20px;
+    }
+  }
+
+  &attentionItem {
+    font-size: getSize(22, 750) + "vw";
+    line-height: lh(33, 22);
+    color: #fff;
+    @include textJustify;
+    position: relative;
+    text-indent: -1em;
+    padding-left: 1em;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    transform: rotate(0.03deg);
+
+    @include media(sp, min) {
+      line-height: lh(24, 14);
+      font-size: 14px;
+    }
+  }
+
+  &annotation_link {
+    display: inline;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  // copyright
+
+  &copyRightWrap {
+    margin: 5.666667% auto 0;
+    padding-bottom: 0;
+    @include media(sp, min) {
+      width: 1080px;
+      margin: 57px auto 0;
+    }
+  }
+  &copyRight {
+    @include media(sp, min) {
+      display: block;
+      width: 532px;
+      display: block;
+      transform: translateX(-30px);
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .lp-safari {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}

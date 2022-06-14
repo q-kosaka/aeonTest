@@ -1,0 +1,112 @@
+
+
+ <!-- ==
+ JS
+ ======= -->
+ <script type="text/javascript" src="/asset/js/jquery-1.9.0.min.js"></script>
+ <script type="text/javascript" src="/asset/js/jquery.bxslider.min.js"></script>
+ <script type="text/javascript" src="/asset/js/top-function.js"></script>
+ <script type="text/javascript" src="/asset/js/jquery.cookie.js"></script>
+ <script type="text/javascript" src="/asset/js/jquery.layerBoard.js"></script>
+ <script type="text/javascript" src="/asset/js/jquery.floatThead.min.js"></script>
+ <script type="text/javascript" src="/asset/js/function.js"></script>
+ <script type="text/javascript" src="/asset/js/shop.js"></script>
+ <script type="text/javascript" src="/asset/js/jquery.lazyload.min.js?1"></script>
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ $(function() {
+   $('.l-full img').not('.heading2_serviceApp_logo img').not('.serviceApp_box img').not('.modal-close img').not('.noLazyLoad').not('.noLazyLoad img').each(function(){
+     $url = $(this).attr("src");
+     // $(this).attr("src","");
+     $(this).attr("data-original",$url);
+   });
+ // let images = document.querySelectorAll('.l-full img');
+ // lazyload(images,{
+ //     effect: "fadeIn",
+ //    effectspeed: 500
+ //  });
+ //   });
+ 
+ 
+ 
+ 
+ 
+   // $('.l-full img').lazyload({
+   //    effect: "fadeIn",
+   //    effectspeed: 500
+   // });
+ 
+   // $('.l-full img').not('.sp').lazyload({
+   //    effect: "fadeIn",
+   //    effectspeed: 500
+   // });
+ 
+     resizeWidth = $(window).width();
+     var isPc = false
+ 
+   if(resizeWidth > 767){
+     isPc = true
+     $('.l-full img').not('.sp').not('.heading2_serviceApp_logo img').not('.serviceApp_box img').not('.modal-close img').not('.noLazyLoad').not('.noLazyLoad img').lazyload({
+      effect: "fadeIn",
+      effectspeed: 500,
+      threshould: 19999
+   });
+     }else{
+       isPc = false
+       $('.l-full img').not('.pc').lazyload({
+      effect: "fadeIn",
+      effectspeed: 500,
+      threshould: 19999
+ 
+   });
+     }
+ 
+ window.addEventListener('resize', function () {
+   console.log('aaa');
+     resizeWidth = $(window).width();
+   if(resizeWidth > 767 && isPc == false){
+ 
+ // console.log('bbb');
+ // window.setTimeout(function () {
+ //     location.reload();
+ 
+ // }, 1)
+ location.href=location.href;
+ 
+   }else if(resizeWidth <= 768 && isPc == true){
+ console.log('ccc');
+ 
+ // window.setTimeout(function () {
+ //     location.reload();
+ 
+ // }, 1)
+ location.href=location.href;
+ 
+   }
+ })
+   // $(window).on('resize', function() {
+ 
+ // });
+ 
+ 
+ 
+ 
+ 
+ });
+ 
+ 
+ 
+ 
+ 
+ </script>
+ <script src="//c.marsflag.com/mf/mfx/1.0/js/mfx-sbox.js" charset="UTF-8"></script>  
+ 
+ 
+ 
+ 
+ </div>
+ </body>
+ </html>

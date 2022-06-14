@@ -4,22 +4,115 @@ main {
     color: #fff;
     font-size: 1.3rem;
     text-align: center;
+
+    @include media( pc ){
+        background: #1181BF;
+    }
 }
-.cp-cad-all {
+.kv {
+	width:100%;
+	height:196.533vw;
+	background:url(../images/bg02.jpg) no-repeat;
+    background-position: 0 0;
+	background-size:260%;
+	border-bottom:pink solid 5px;
+    @include media( pc ){
+        width:1200px;
+        height:630px;
+        margin:0 auto;
+        background-position: -750px 0;
+        background-size:auto;
+    }
+}
+
+.content {
+	width:100%;
+	height:auto;
+	background:url(../images/bg02.jpg) no-repeat;
+    background-position: 0 0;
+	background-size:260%;
+    @include media( pc ){
+        width:1200px;
+        height:auto;
+        margin:0 auto;
+        background-position: -750px 0;
+        background-size:auto;
+    }
+}
+
+.cp-card-all {
     /*width:92.53vw;*/
     width:96.93vw;
     /*height: 99.33vw;*/
     height: 103.73vw;
-    margin: 0 auto;
+    margin: 0 auto 10vw auto;
     background: url(../images/bg_test3.svg) no-repeat;
+    background-position: center;
+    position: relative;
+    & h3 {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        height: 14.66vw;
+        line-height: 14.66vw;
+        top:6.66vw;
+        font-size: 2rem;
+        font-weight: bold;
+        @include media( pc ){
+            width:530px;
+            height: 50px;
+            line-height: 50px;
+            top:50px;
+        }
+    }
+
+    @include media( pc ){
+        width:530px;
+        height: 540px;
+    }
 }
-.cp-cad-week {
-    width:89.33vw;
-    height: 96.13vw;
-    margin: 0 auto;
-    background: rgba( 13, 122, 172, 0.6 ) url(../images/bg_test4.svg) no-repeat 100%;
-    box-shadow: 0 0 1.6vw 1.6vw rgba( 13, 122, 172, 0.6 );
+.cp-card-download {
+    position: absolute;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: bold;
+    top:24.65vw;
+    & span {
+    font-size: 1.2rem;
+    }
+    @include media( pc ){
+        top:150px;
+    }
+}
+.cp-card-img {
+    position: absolute;
+    width: 76.66%;
+    height: 48.4vw;
+    line-height: 48.4vw;
+    font-size: 1rem;
+    font-weight: bold;
+    top:37.98vw;
+    left:calc((100% - 76.66%) / 2);
+    text-align: center;
     border-radius: 10px;
+    background:#eaeaea;
+    @include media( pc ){
+        top:200px;
+        width: 75%;
+        left: 12.5%;
+        height: 250px;
+        line-height:250px;
+        ;
+    }
+}
+
+.cp-card-box {
+    @include media( pc ){
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+    }
 }
 .cp-twitter {
     background:linear-gradient(60deg, #F0B672 9.5%, #F9E3AF 31.2%, #FCECD8 50%, #F9E3AF 68.8%, #F0B672 90.5%);

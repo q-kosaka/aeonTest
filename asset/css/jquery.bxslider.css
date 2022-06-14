@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/* スライドショー */
+.mainSlider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: #e0e0e0;
+  z-index: 0; }
+  @media (min-width: 768px) {
+    .mainSlider::before, .mainSlider::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: calc(50% - 540px);
+      height: calc(100% - 30px);
+      opacity: 0.8;
+      background: #fff;
+      z-index: 9998; }
+    .mainSlider::before {
+      left: 0; }
+    .mainSlider::after {
+      right: 0; } }
+
+.sliderInner {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%; }
+
+.bx-viewport {
+  overflow: visible !important;
+  background: #FFF; }
+
+.bx-wrapper {
+  margin: 0 auto;
+  position: relative;
+  /* ページャー */ }
+  .bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    margin: auto;
+    outline: 0;
+    text-indent: -9999px;
+    z-index: 9999;
+    width: 7.34375vw;
+    height: 11.5625vw;
+    background: #0d64ac url(/asset/img/common/arrow-white.png) center no-repeat;
+    background-size: 3.125vw auto;
+    bottom: 0;
+    border-radius: 1.875vw 0 0 1.875vw;
+    /* コントローラー */ }
+    @media (min-width: 768px) {
+      .bx-wrapper .bx-controls-direction a {
+        top: 0;
+        bottom: 30px;
+        width: 44px;
+        height: 44px;
+        background-size: 17px auto;
+        border-radius: 50%; } }
+    .bx-wrapper .bx-controls-direction a.bx-prev {
+      left: 0;
+      transform: rotate(180deg); }
+      @media (min-width: 768px) {
+        .bx-wrapper .bx-controls-direction a.bx-prev {
+          left: -22px; } }
+    .bx-wrapper .bx-controls-direction a.bx-prev:hover {
+      opacity: 1; }
+    .bx-wrapper .bx-controls-direction a.bx-next {
+      right: 0; }
+      @media (min-width: 768px) {
+        .bx-wrapper .bx-controls-direction a.bx-next {
+          right: -22px; } }
+    .bx-wrapper .bx-controls-direction a.bx-next:hover {
+      opacity: 1; }
+  .bx-wrapper .bx-pager {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0;
+    padding: 3.125vw 0; }
+    @media (min-width: 768px) {
+      .bx-wrapper .bx-pager {
+        padding: 5px 0; } }
+    .bx-wrapper .bx-pager .bx-pager-item {
+      display: inline-block; }
+    .bx-wrapper .bx-pager.bx-default-pager a {
+      width: 6.25vw;
+      height: 5.46875vw;
+      margin: 0 1.5625vw;
+      display: block;
+      outline: 0;
+      text-indent: -9999px;
+      background: url(/asset/img/common/icon-pager_off.png) center no-repeat;
+      background-size: 6.25vw auto; }
+      @media (min-width: 768px) {
+        .bx-wrapper .bx-pager.bx-default-pager a {
+          width: 23px;
+          height: 20px;
+          margin: 0 5px;
+          background-size: 23px auto; } }
+      .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background-image: url(/asset/img/common/icon-pager_on.png);
+        background-size: contain; }
+
+/* 紫ボックスフリック */
+.flow {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden; }
+  .flow .bx-wrapper {
+    max-width: 80% !important; }
+    @media (min-width: 768px) {
+      .flow .bx-wrapper {
+        max-width: none !important; } }
+  @media (min-width: 768px) {
+    .flow .bx-viewport {
+      width: auto !important;
+      height: auto !important; } }
+  .flow .flow_box {
+    display: none; }
+    @media (min-width: 768px) {
+      .flow .flow_box {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between;
+        transform: none !important; } }
+    .flow .flow_box .flow_boxList {
+      padding: 0 3vw;
+      box-sizing: border-box; }
+      @media (min-width: 768px) {
+        .flow .flow_box .flow_boxList {
+          float: none !important;
+          padding: 0;
+          position: relative;
+          width: 50% !important; } }
+      .flow .flow_box .flow_boxList-step01::after {
+        content: "";
+        display: block;
+        width: 10vw;
+        height: 10vw;
+        background: url("/asset/img/common/arrow-purple.png") no-repeat center;
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        right: -5vw;
+        bottom: 0;
+        margin: auto;
+        z-index: 1; }
+      @media (min-width: 768px) {
+        .flow .flow_box .flow_boxList-step01::after {
+          width: 50px;
+          height: 100px;
+          right: -25px; } }
+
+/* モーダルウィンドウ */
+.lock {
+  overflow: hidden; }
+
+.l-ofhidden {
+  overflow: hidden; }
+
+.modal-content {
+  position: fixed;
+  display: none;
+  z-index: 10002;
+  width: 80vw;
+  margin: auto !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  height: 430px; }
+  @media (min-width: 768px) {
+    .modal-content {
+      width: 500px;
+      height: 80vh; } }
+
+.modalwrap {
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 5vw 6vw;
+  box-sizing: border-box; }
+  @media (min-width: 768px) {
+    .modalwrap {
+      padding: 30px; } }
+  .modalwrap_ttl {
+    font-size: 5vw;
+    color: #0d64ac; }
+    @media (min-width: 768px) {
+      .modalwrap_ttl {
+        font-size: 18px;
+        padding-bottom: 15px; } }
+
+.modal-overlay {
+  z-index: 10001;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: hidden; }
+
+.modal-open:hover {
+  cursor: pointer; }
+
+.modal-close:hover {
+  cursor: pointer; }
+
+.pointlogo-box {
+  margin: 2vw auto 4vw;
+  border: 1px solid #e0e0e0; }
+  @media (min-width: 768px) {
+    .pointlogo-box {
+      margin: 10px auto 30px; } }
+  .pointlogo-box_img {
+    width: 50vw;
+    margin: 5vw auto; }
+    @media (min-width: 768px) {
+      .pointlogo-box_img {
+        width: 80%;
+        margin: 30px auto; } }
+
+.exchangetableBox {
+  color: #373737;
+  box-sizing: border-box; }
+  @media (min-width: 768px) {
+    .exchangetableBox {
+      padding: 0 0 20px;
+      margin: -10px auto 0;
+      width: auto; } }
+  .exchangetableBox .exchangetable {
+    width: 100%;
+    font-size: 3.5vw;
+    border-collapse: separate;
+    text-align: left;
+    border-collapse: separate; }
+    @media (min-width: 768px) {
+      .exchangetableBox .exchangetable {
+        font-size: 14px; } }
+    .exchangetableBox .exchangetable tr {
+      display: table;
+      border-bottom: 1px dashed #bbae9f;
+      width: 100%;
+      padding: 3vw 0; }
+      @media (min-width: 768px) {
+        .exchangetableBox .exchangetable tr {
+          padding: 16px 0; } }
+    .exchangetableBox .exchangetable td {
+      line-height: 1.4;
+      vertical-align: middle; }
+    .exchangetableBox .exchangetable_left {
+      width: 23vw;
+      vertical-align: middle;
+      padding-left: 2vw; }
+      @media (min-width: 768px) {
+        .exchangetableBox .exchangetable_left {
+          padding-left: 0px;
+          width: 140px; } }
+  .exchangetableBox .cardDetailList_text {
+    font-size: 3vw;
+    margin: 5vw auto;
+    line-height: 1.5; }
+    @media (min-width: 768px) {
+      .exchangetableBox .cardDetailList_text {
+        font-size: 12px;
+        margin: 13px auto; } }
+
+.modal-close {
+  position: absolute;
+  width: 8vw;
+  top: -11vw;
+  right: -1vw; }
+  @media (min-width: 768px) {
+    .modal-close {
+      width: 30px;
+      top: -40px;
+      right: -36px; } }
+  .modal-close:hover {
+    opacity: 1; }
+
+/*# sourceMappingURL=maps/jquery.bxslider.css.map */

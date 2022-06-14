@@ -1,0 +1,338 @@
+<section class="lp-card">
+
+
+  <h2 class="lp-cardTtl">
+    <img src="/asset/img/campaign/20220701sailormooncp/0701/bottom_txt01_sp.svg" alt="カードデザインは全8種類!毎週更新をお楽しみに!"
+      class="use--sp" />
+    <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/bottom_txt01_pc.svg" alt="カードデザインは全8種類!毎週更新をお楽しみに!"
+      class="use--pc" />
+  </h2>
+
+  <ul class="lp-cardList">
+    <% if (data.update=='0' ) { %>
+      <% for (let j=0; j < card0.length; j++) { %>
+        <li class="lp-cardItem ">
+          <figure class="lp-cardFigure">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/card/<%- card0[j].no %>_<%- card0[j].open %>.png"
+              alt="<%- card0[j].alt %>" />
+          </figure>
+          <div class="lp-cardTxtWrap">
+            <p class="lp-cardSituation">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/state<%- card0[j].state %>.svg" alt="<%- card0[j].txt %>" />
+            </p>
+            <p class="lp-cardTime">
+              <time datetime="<%- card0[j].datetime01 %>">
+                <%- card0[j].time01 %>
+              </time>
+              <time datetime="<%- card0[j].datetime02 %>">
+                <%- card0[j].time02 %>
+              </time>
+            </p>
+          </div>
+        </li>
+        <% } %>
+          <% } else if (data.update=='1' ) { %>
+            <% for (let j=0; j < card1.length; j++) { %>
+              <li class="lp-cardItem ">
+                <figure class="lp-cardFigure">
+                  <img
+                    src="/asset/img/campaign/20220701sailormooncp/0701/card/<%- card1[j].no %>_<%- card1[j].open %>.png"
+                    alt="<%- card1[j].alt %>" />
+                </figure>
+                <div class="lp-cardTxtWrap">
+                  <p class="lp-cardSituation">
+                    <img src="/asset/img/campaign/20220701sailormooncp/0701/state<%- card1[j].state %>.svg"
+                      alt="<%- card1[j].txt %>" />
+                  </p>
+                  <p class="lp-cardTime">
+                    <time datetime="<%- card0[j].datetime01 %>">
+                      <%- card0[j].time01 %>
+                    </time>
+                    <time datetime="<%- card0[j].datetime02 %>">
+                      <%- card0[j].time02 %>
+                    </time>
+                  </p>
+                </div>
+              </li>
+              <% } %>
+                <% } else if (data.update=='2' ) { %>
+                  <% for (let j=0; j < card2.length; j++) { %>
+                    <li class="lp-cardItem">
+                      <figure class="lp-cardFigure">
+                        <img
+                          src="/asset/img/campaign/20220701sailormooncp/0701/card/<%- card2[j].no %>_<%- card2[j].open %>.png"
+                          alt="<%- card2[j].alt %>" />
+                      </figure>
+                      <div class="lp-cardTxtWrap">
+                        <p class="lp-cardSituation">
+                          <img src="/asset/img/campaign/20220701sailormooncp/0701/state<%- card2[j].state %>.svg"
+                            alt="<%- card2[j].txt %>" />
+                        </p>
+                        <p class="lp-cardTime">
+                          <time datetime="<%- card0[j].datetime01 %>">
+                            <%- card0[j].time01 %>
+                          </time>
+                          <time datetime="<%- card0[j].datetime02 %>">
+                            <%- card0[j].time02 %>
+                          </time>
+                        </p>
+                      </div>
+                    </li>
+                    <% } %>
+                      <% } else if (data.update=='3' ) { %>
+                        <% for (let j=0; j < card0.length; j++) { %>
+                          <li class="lp-cardItem">
+                            <figure class="lp-cardFigure">
+                              <img
+                                src="/asset/img/campaign/20220701sailormooncp/0701/card/<%- card3[j].no %>_<%- card3[j].open %>.png"
+                                alt="<%- card3[j].alt %>" />
+                            </figure>
+                            <div class="lp-cardTxtWrap">
+                              <p class="lp-cardSituation">
+                                <img src="/asset/img/campaign/20220701sailormooncp/0701/state<%- card3[j].state %>.svg"
+                                  alt="<%- card3[j].txt %>" />
+                              </p>
+                              <p class="lp-cardTime">
+                                <time datetime="<%- card0[j].datetime01 %>">
+                                  <%- card0[j].time01 %>
+                                </time>
+                                <time datetime="<%- card0[j].datetime02 %>">
+                                  <%- card0[j].time02 %>
+                                </time>
+                              </p>
+                            </div>
+                          </li>
+                          <% } %>
+                            <% } else if (data.update=='4' ) { %>
+                              <% for (let j=0; j < card4.length; j++) { %>
+                                <li class="lp-cardItem">
+                                  <figure class="lp-cardFigure">
+                                    <img
+                                      src="/asset/img/campaign/20220701sailormooncp/0701/card/<%- card4[j].no %>_<%- card4[j].open %>.png"
+                                      alt="<%- card4[j].alt %>" />
+                                  </figure>
+                                  <div class="lp-cardTxtWrap">
+                                    <p class="lp-cardSituation">
+                                      <img
+                                        src="/asset/img/campaign/20220701sailormooncp/0701/state<%- card4[j].state %>.svg"
+                                        alt="<%- card4[j].txt %>" />
+                                    </p>
+                                    <p class="lp-cardTime">
+                                      <time datetime="<%- card0[j].datetime01 %>">
+                                        <%- card0[j].time01 %>
+                                      </time>
+                                      <time datetime="<%- card0[j].datetime02 %>">
+                                        <%- card0[j].time02 %>
+                                      </time>
+                                    </p>
+                                  </div>
+                                </li>
+                                <% } %>
+                                  <% } else if (data.update=='5' ) { %>
+                                    <% for (let j=0; j < card5.length; j++) { %>
+                                      <li class="lp-cardItem">
+                                        <figure class="lp-cardFigure">
+                                          <img
+                                            src="/asset/img/campaign/20220701sailormooncp/0701/card/<%- card5[j].no %>_<%- card5[j].open %>.png"
+                                            alt="<%- card5[j].alt %>" />
+                                        </figure>
+                                        <div class="lp-cardTxtWrap">
+                                          <p class="lp-cardSituation">
+                                            <img
+                                              src="/asset/img/campaign/20220701sailormooncp/0701/state<%- card5[j].state %>.svg"
+                                              alt="<%- card5[j].txt %>" />
+                                          </p>
+                                          <p class="lp-cardTime">
+                                            <time datetime="<%- card0[j].datetime01 %>">
+                                              <%- card0[j].time01 %>
+                                            </time>
+                                            <time datetime="<%- card0[j].datetime02 %>">
+                                              <%- card0[j].time02 %>
+                                            </time>
+                                          </p>
+                                        </div>
+                                      </li>
+                                      <% } %>
+                                        <% } else if (data.update=='6' ) { %>
+                                          <% for (let j=0; j < card6.length; j++) { %>
+                                            <li class="lp-cardItem">
+                                              <figure class="lp-cardFigure">
+                                                <img
+                                                  src="/asset/img/campaign/20220701sailormooncp/0701/card/<%- card6[j].no %>_<%- card6[j].open %>.png"
+                                                  alt="<%- card6[j].alt %>" />
+                                              </figure>
+                                              <div class="lp-cardTxtWrap">
+                                                <p class="lp-cardSituation">
+                                                  <img
+                                                    src="/asset/img/campaign/20220701sailormooncp/0701/state<%- card6[j].state %>.svg"
+                                                    alt="<%- card6[j].txt %>" />
+                                                </p>
+                                                <p class="lp-cardTime">
+                                                  <time datetime="<%- card0[j].datetime01 %>">
+                                                    <%- card0[j].time01 %>
+                                                  </time>
+                                                  <time datetime="<%- card0[j].datetime02 %>">
+                                                    <%- card0[j].time02 %>
+                                                  </time>
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <% } %>
+                                              <% } %>
+  </ul>
+
+  <small class="lp-cardAnnotation">
+    ※美少女戦士セーラームーンWAONは発行可能期間になりましたらWAONアプリ画面の「WAONを追加」からカード選択画面に表示されます。
+  </small>
+
+</section>
+</div>
+<section id="linkTwitter" class="lp-sns">
+  <div class="lp-snsBg">
+
+
+    <div class="lp-snsWrap">
+
+      <h2 class="lp-snsTtl">
+        <img src="/asset/img/campaign/20220701sailormooncp/0701/follow01_sp.svg"
+          alt="期間限定 WAON × 美少女戦士セーラームーンの公式アカウントをフォローしよう!" class="use--sp" />
+        <img src="/asset/img/campaign/20220701sailormooncp/0701/follow01_pc.svg"
+          alt="期間限定 WAON × 美少女戦士セーラームーンの公式アカウントをフォローしよう!" class="use--pc" />
+      </h2>
+
+      <p class="lp-snsAccount">
+        限定デザインカードの<br class="use--sp"><strong>最新情報</strong>をお届け中！
+      </p>
+
+      <a href="" class="lp-sns_link">
+        <span>
+          Twitter公式アカウントはこちら
+        </span>
+      </a>
+
+      <div class="lp-snsTxtWrap">
+        <time class="lp-snsTime" datetime="2020-07-29">
+          <img src="/asset/img/campaign/20220701sailormooncp/0701/followTxt01.svg" alt="7/29（金）から！" />
+        </time>
+        <p class="lp-snsTxt">
+          Twitterフォロー&リツイートキャンペーン<br class="use--sp">スタート予定！乞うご期待！
+        </p>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+
+</section>
+
+<div class="lp-bgWrap--bottom">
+  <section class="lp-flow">
+    <h2 id="linkFlow" class="lp-flowTtl">
+      <img src="/asset/img/campaign/20220701sailormooncp/0701/bottom_txt02.svg" alt="美少女戦士セーラームーンWAONの発行方法"
+        class="use--sp" />
+      <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/bottom_txt02_pc.svg" alt="美少女戦士セーラームーンWAONの発行方法"
+        class="use--pc" />
+
+    </h2>
+    <ol class="lp-flowList">
+      <li class="lp-flowItem">
+        <div class="lp-flowNo">
+          1
+        </div>
+        <p class="lp-flowTxt">
+          <span>
+            「WAONアプリ」をダウンロード
+          </span>
+
+        </p>
+        <div class="lp-downLoadIconWrap">
+          <figure class="lp-downLoadFigure_icon">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/icon_waon.svg" alt="WAONアプリ" />
+          </figure>
+          <figure class="lp-downLoadFigure_app">
+            <a href="https://apps.apple.com/jp/app/waon%E3%82%A2%E3%83%97%E3%83%AA/id1471075782"
+              class="lp-downLoadFigure_app_link" target="_blank">
+              <img src="/asset/img/campaign/20220701sailormooncp/0701/icon_apple.svg" alt="App Storeからダウンロード" />
+            </a>
+          </figure>
+          <figure class="lp-downLoadFigure_qr use--pc">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/pc/qr.svg" alt="ダウンロードQRコード" />
+          </figure>
+        </div>
+      </li>
+      <% for (let j=1; j < flow.length; j++) { %>
+        <li class="lp-flowItem">
+          <div class="lp-flowNo">
+            <%- [j+1] %>
+          </div>
+          <p class="lp-flowTxt">
+            <%- flow[j].txt %>
+          </p>
+          <figure class="lp-flowFigure">
+            <img src="/asset/img/campaign/20220701sailormooncp/0701/flow0<%-j%>.png" alt="<%- flow[j].alt %>" />
+          </figure>
+        </li>
+        <% } %>
+          <li class="lp-flowItem">
+            <p class="lp-flowEnd">
+              <span class="lp-safari">
+                発行完了
+              </span>
+            </p>
+          </li>
+
+    </ol>
+  </section>
+
+
+  <section class="lp-period">
+
+
+    <h2 class="lp-periodTtl">
+      美少女戦士セーラームーンWAON<br class="use--sp">ダウンロード（発行期間）について
+    </h2>
+
+    <div class="lp-periodWrap">
+      <p class="lp-periodTime">
+        毎週<strong>金曜日</strong>00：00～翌週<strong>木曜日</strong>17：30
+      </p>
+
+      <small class="lp-periodAnnotation">
+          WAONアプリのダウンロードのタイミングにより、<br class="use--sp">上記期間外でもカード発行が可能な場合があります。
+      </small>
+
+      <div class="lp-attentionWrap acdn first-acdn">
+        <h3 class="lp-attentionHead acdn_ttl first-acdn_ttl">
+          <span>
+            注意点を見る
+          </span>
+        </h3>
+        <ul class="lp-attentionList acdn-target first-acdn-target">
+          <% for (let j=0; j < attention.length; j++) { %>
+            <li class="lp-attentionItem">
+              <%- attention[j].txt %>
+            </li>
+            <% } %>
+        </ul>
+
+      </div>
+
+
+    </div>
+
+
+
+  </section>
+
+
+  <div class="lp-copyRightWrap">
+    <small class="lp-copyRight">
+      <img src="/asset/img/campaign/20220701sailormooncp/0701/copyright01.png"
+        alt="©武内直子・PNP／劇場版「美少女戦士セーラームーン Eternal」製作委員会 ©Naoko Takeuchi">
+    </small>
+  </div>
+</div>

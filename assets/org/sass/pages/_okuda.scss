@@ -1,0 +1,883 @@
+@charset "UTF-8";
+
+.lp- {
+
+  &kv {
+    position: relative;
+
+    &::after {
+      @include after;
+      width: 100%;
+      padding-top: getSize(10%);
+      background: linear-gradient(39deg, #E75297 15%, #F6C8DD 40%, #E75297 60%);
+      position: absolute;
+      bottom: 1px;
+      transform: translateY(100%);
+      z-index: 1;
+
+      @include media(pc) {
+        padding-top: 5px;
+      }
+    }
+
+    @include media(pc) {
+      background-color: #151F3A;
+    }
+  }
+
+  &kv_inner {
+    position: relative;
+    width: 100%;
+    padding-top: getSize(1474%);
+/*    background-image: url("/asset/img/campaign/20220701sailormooncp/0701/kv_bg01.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;*/
+    background:url(/assets/images/kv_bg01.jpg) no-repeat;
+    background-position: 0 0;
+    background-size:260%;
+
+    /*@include media(pc) {
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 630px;
+    }*/
+    @include media( pc ){
+        width:1200px;
+        height:630px;
+        margin:0 auto;
+        padding-top: 0;
+        background-position: -750px 0;
+        background-size:auto;
+    }
+
+    /*&::before {
+      @include after;
+      width: 100%;
+      height: 100%;
+      background-image: url("/asset/img/campaign/20220701sailormooncp/0701/pc/kv_bg01.jpg");
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include media(sp) {
+        display: none;
+      }
+    }*/
+  }
+
+  &kv_logo {
+    width: getSize(131.4%);
+    position: absolute;
+    top: getSize(14, 1474) + '%';
+    right: getSize(12%);
+
+    @include media(pc) {
+      width: 92px;
+      top: 14px;
+      right: 14px;
+    }
+  }
+
+  &kv_header {
+    width: getSize(298%);
+    position: absolute;
+    top: getSize(46, 1474) + '%';
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media(pc) {
+      width: 263px;
+      top: 31px;
+    }
+  }
+
+  &kv_title {
+    width: getSize(647%);
+    padding-top: getSize(423%);
+    position: absolute;
+    top: getSize(127, 1474) + '%';
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media(pc) {
+      width: 530px;
+      padding-top: 313px;
+      top: 133px;
+      left: 80px;
+      transform: translateX(0);
+    }
+  }
+
+  &kv_title_top {
+    width: getSize(200, 647)+'%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(2%);
+
+    @include media(pc) {
+      width: 148px;
+      transform: translateX(0);
+    }
+  }
+
+  &kv_title_bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(0.5%);
+
+    @include media(pc) {
+      width: 516px;
+      transform: translateX(0);
+    }
+  }
+
+  &kv_text {
+    width: getSize(634%);
+    position: absolute;
+    top: 36.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media(pc) {
+      width: 503px;
+      top: 434px;
+      left: 102px;
+      transform: translateX(0);
+    }
+  }
+
+  &kv_figure {
+    width: getSize(600%);
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+
+    @include media(pc) {
+      width: 389px;
+      right: 124px;
+      transform: translateX(0);
+    }
+  }
+
+  &bgWrap {
+/*    background-image: url("/asset/img/campaign/20220701sailormooncp/0701/bg01.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;*/
+    background:url(/assets/images/bg02.jpg) no-repeat;
+    background-position: 0 0;
+    background-size:260%;
+    position: relative;
+
+/*    @include media(pc) {
+      width: 1200px;
+      margin: 0 auto;
+    }*/
+    @include media( pc ){
+        width:1200px;
+        margin:0 auto;
+        background-position: -750px 0;
+        background-size:auto;
+    }
+
+/*    &::before {
+      @include after;
+      width: 100%;
+      height: 100%;
+      background-image: url("/asset/img/campaign/20220701sailormooncp/0701/pc/bg01.jpg");
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include media(sp) {
+        display: none;
+      }
+    }*/
+
+    &--bottom {
+      @extend .lp-bgWrap;
+/*      background-image: url("/asset/img/campaign/20220701sailormooncp/0701/bg02.jpg");*/
+      background:url(/assets/images/bg02.jpg) no-repeat;
+
+/*      @include media(pc) {
+        width: 1200px;
+        margin: 0 auto;
+      }*/
+      @include media( pc ){
+          width:1200px;
+          height:auto;
+          margin:0 auto;
+          background-position: -750px 0;
+          background-size:auto;
+      }
+
+/*      &::before {
+        @include after;
+        width: 100%;
+        height: 100%;
+        background-image: url("/asset/img/campaign/20220701sailormooncp/0701/pc/bg02.jpg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include media(sp) {
+          display: none;
+        }
+      }*/
+    }
+  }
+
+  &info_nav {
+    width: 100%;
+    padding-top: 9%;
+
+    @include media(pc) {
+      padding-top: 49px;
+    }
+  }
+
+  &info_list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &info_item {
+    width: getSize(242%);
+    padding-top: getSize(159%);
+    pointer-events: none;
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-right: -1.4%;
+    }
+
+    @for $var from 1 through 3 {
+      &:nth-of-type(#{$var}) {
+        background: url("/asset/img/campaign/20220701sailormooncp/0701/info_btn0#{$var}.svg") no-repeat 0.4vw 0.4vw / 100% auto;
+        z-index: 4 - $var;
+      }
+    }
+
+    @include media(pc) {
+      width: 368px;
+      padding-top: 66px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @for $var from 1 through 3 {
+        &:nth-of-type(#{$var}) {
+          background: url("/asset/img/campaign/20220701sailormooncp/0701/pc/info_btn0#{$var}.svg") no-repeat 2px 2px / 100% auto;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: -1px;
+      }
+    }
+  }
+
+  &info_link {
+    display: block;
+    width: getSize(216, 242)+'%';
+    padding-top: getSize(133, 242)+'%';
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+
+    @include media(pc) {
+      width: 348px;
+      padding-top: 46px;
+    }
+  }
+
+  &info_logo {
+    width: getSize(544%);
+    margin: 9% auto 0 getSize(146%);
+    position: relative;
+
+    @include media(pc) {
+      width: 414px;
+      margin: 57px auto 0 425px;
+    }
+  }
+
+  &info_head {
+    width: getSize(634%);
+    margin: 4% auto 0;
+    transform: translateX(-1%);
+    position: relative;
+
+    &::before {
+      @include after;
+      width: getSize(654, 634)+'%';
+      padding-top: getSize(336, 634)+'%';
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/info_deco01.svg") no-repeat center center / 100% auto;
+      position: absolute;
+      top: -18.5%;
+      left: -1.5%;
+      z-index: -1;
+
+      @include media(pc) {
+        width: 933px;
+        padding-top: 249px;
+        background: url("/asset/img/campaign/20220701sailormooncp/0701/pc/info_deco01.svg") no-repeat center center / 100% auto;
+        top: -111px;
+        left: -20px;
+      }
+    }
+
+    @include media(pc) {
+      width: 870px;
+      margin: 20px auto 0;
+    }
+  }
+
+  &info_text {
+    margin-top: 1%;
+    font-size: getSize(30vw);
+    line-height: lh(48, 30);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 getSize(6vw) rgba(15, 0, 68, 0.6);
+    transform: rotate(0.03deg);
+
+    @include media(pc) {
+      margin-top: -6px;
+      font-size: 20px;
+      line-height: lh(32, 20);
+    }
+  }
+
+  &yellowText {
+    color: #FCEE21;
+    font-weight: 700;
+  }
+
+  &info_movie {
+    width: getSize(672%);
+    padding-top: getSize(383%);
+    margin: 7% auto 0;
+    background: linear-gradient(60deg, #F0B672 0%, #F9E3AF 23%, #FCECD8 35%, #F9E3AF 45%, #F0B672 59%, #F9E3AF 73%, #F0B672 100%);
+    border-radius: 5vw;
+    position: relative;
+
+    @include media(pc) {
+      width: 672px;
+      margin: 30px auto 0;
+      padding-top: 383px;
+      border-radius: 35px;
+    }
+  }
+
+  &info_movieInner {
+    width: getSize(660, 672)+'%';
+    padding-top: getSize(371, 672)+'%';
+    border-radius: 4.5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    >iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+    }
+
+    @include media(pc) {
+      width: 660px;
+      padding-top: 371px;
+      border-radius: 30px;
+    }
+  }
+
+  &design {
+    margin-top: 16.1%;
+
+    @include media(pc) {
+      margin-top: 107px;
+    }
+  }
+
+  &design_head {
+    width: getSize(523%);
+    transform: translateX(1%);
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      @include after;
+      width: getSize(636vw);
+      padding-top: getSize(77, 523)+'%';
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/info_deco02.svg") no-repeat center center / 100% auto;
+      position: absolute;
+      top: 30%;
+      left: 49%;
+      transform: translateX(-50%);
+
+      @include media(pc) {
+        width: 848px;
+        padding-top: 65px;
+        background: url("/asset/img/campaign/20220701sailormooncp/0701/pc/info_deco02.svg") no-repeat center center / 100% auto;
+        top: -9px;
+        left: 50%;
+      }
+    }
+
+    @include media(pc) {
+      width: 694px;
+      transform: translateX(0);
+    }
+  }
+
+  &design_list {
+    margin-top: 4%;
+
+    @include media(pc) {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+
+  &design_item {
+    &.mod-red {
+      margin-top: 11.5%;
+
+      @include media(pc) {
+        margin-top: 0;
+        margin-left: -50px;
+      }
+    }
+  }
+
+  &design_headText {
+    font-size: getSize(32vw);
+    letter-spacing: -0.03em;
+    line-height: lh(46, 32);
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 getSize(4vw) rgba(15, 0, 68, 0.4);
+    position: relative;
+    transform: rotate(0.03deg);
+
+    @include media(pc) {
+      font-size: 19px;
+      line-height: 1.65;
+
+      .mod-red & {
+        transform: translateX(4px) rotate(0.03deg);
+      }
+    }
+
+    & .lp-yellowText {
+      font-size: getSize(40vw);
+      line-height: lh(46, 40);
+
+      @include media(pc) {
+        font-size: 24px;
+        line-height: lh(27, 24);
+      }
+    }
+
+    &::before {
+      @include after;
+      width: getSize(34%);
+      padding-top: getSize(76%);
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/textDeco_left.svg") no-repeat center center / 100% auto;
+      position: absolute;
+      top: 10%;
+      left: 11%;
+
+      @include media(pc) {
+        width: 20px;
+        padding-top: 45px;
+        top: 5px;
+        left: 123px;
+      }
+
+      .mod-red & {
+        top: 15%;
+        left: 5%;
+
+        @include media(pc) {
+          top: 8px;
+          left: 100px;
+        }
+      }
+    }
+
+    &::after {
+      @include after;
+      width: getSize(34%);
+      padding-top: getSize(76%);
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/textDeco_right.svg") no-repeat center center / 100% auto;
+      position: absolute;
+      top: 10%;
+      right: 11%;
+
+      @include media(pc) {
+        width: 20px;
+        padding-top: 45px;
+        top: 5px;
+        right: 131px;
+      }
+
+      .mod-red & {
+        top: 15%;
+        right: 5%;
+
+        @include media(pc) {
+          top: 8px;
+          right: 100px;
+        }
+      }
+    }
+  }
+
+  &design_box {
+    position: relative;
+    width: getSize(766%);
+    padding-top: getSize(818%);
+    margin-top: -1%;
+    background: url("/asset/img/campaign/20220701sailormooncp/0701/card_bg_blue.png") no-repeat center top / 100% auto;
+    color: #fff;
+    transform: translateX(-1%);
+
+    @include media(pc) {
+      width: 602px;
+      padding-top: 613px;
+      margin-top: -20px;
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/pc/card_bg_blue.png") no-repeat center top / 100% auto;
+      transform: translateX(0);
+    }
+
+    .mod-red & {
+      padding-top: getSize(896%);
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/card_bg_red.png") no-repeat center top / 100% auto;
+
+      @include media(pc) {
+        width: 602px;
+        padding-top: 613px;
+        background: url("/asset/img/campaign/20220701sailormooncp/0701/pc/card_bg_red.png") no-repeat center top / 100% auto;
+      }
+    }
+  }
+
+  &design_title {
+    width: 70%;
+    height: getSize(75vw);
+    font-size: getSize(36vw);
+    line-height: lh(42, 36);
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 700;
+    position: absolute;
+    top: 11.2%;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: -0.05em;
+
+    @include media(pc) {
+      height: 72px;
+      font-size: 24px;
+      line-height: lh(24, 24);
+      top: 94px;
+    }
+
+    .mod-red & {
+      height: getSize(140vw);
+      top: 11.2%;
+
+      @include media(pc) {
+        height: 72px;
+        top: 94px;
+      }
+    }
+  }
+
+  &design_title_inline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.1;
+
+    @include media(pc) {
+      line-height: 1;
+    }
+
+    >span {
+      font-size: 4vw;
+      display: inline-block;
+      transform: translateY(-15%) rotate(0.03deg);
+
+      @include media(pc) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &design_time {
+    font-size: getSize(24vw);
+    line-height: lh(38, 24);
+    text-align: center;
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%) rotate(0.03deg);
+
+    @include media(pc) {
+      font-size: 14px;
+      line-height: lh(27, 14);
+      white-space: nowrap;
+      top: 202px;
+
+      >span {
+        display: inline;
+      }
+
+
+    }
+
+    .mod-red & {
+      top: 31%;
+
+      @include media(pc) {
+        top: 202px;
+      }
+    }
+  }
+
+  &design_time_inlineHead {
+    @include media(pc) {
+      &::after {
+        display: inline;
+        content: '：';
+      }
+    }
+  }
+
+  &design_time_inlineText {
+    font-size: getSize(28vw);
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    transform: rotate(0.03deg);
+
+    @include media(pc) {
+      font-size: 16px;
+      line-height: lh(27, 16);
+    }
+  }
+
+  &design_img {
+    width: getSize(665, 766) + '%';
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media(pc) {
+      width: 480px;
+      top: 207px;
+    }
+
+    .mod-red & {
+      top: 37.5%;
+
+      @include media(pc) {
+        top: 207px;
+      }
+    }
+  }
+
+  &design_text {
+    width: getSize(350%);
+    position: absolute;
+    bottom: 8.3%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media(pc) {
+      width: 292px;
+    }
+
+    .mod-red & {
+      bottom: 7.6%;
+
+      @include media(pc) {
+        left: 0;
+        bottom: 19px;
+        transform: translateX(-41%);
+      }
+    }
+  }
+
+  &design_attention {
+    margin-top: -1.5%;
+    font-size: getSize(20vw);
+    line-height: lh(24, 20);
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    transform: rotate(0.03deg);
+
+    @include media(pc) {
+      font-size: 14px;
+
+      .mod-red & {
+        transform: translate(-46%, 75%) rotate(0.03deg);
+      }
+    }
+  }
+
+  &period {
+    &.top {
+      margin: 10.4% auto 0;
+
+      @include media(pc) {
+        margin: 98px auto 0;
+      }
+    }
+  }
+
+  &download_head {
+    margin-top: 10%;
+    font-size: getSize(36vw);
+    line-height: lh(52, 36);
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    text-shadow: 0 0 getSize(6vw) rgba(15, 0, 68, 0.6);
+
+    @include media(pc) {
+      margin-top: 75px;
+      font-size: 27px;
+      line-height: lh(39, 27);
+    }
+
+    &::before {
+      @include after;
+      width: getSize(14%);
+      padding-top: getSize(32%);
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/textDeco_left02.svg") no-repeat center top / 100% auto;
+      position: absolute;
+      top: 16%;
+      left: 13%;
+
+      @include media(pc) {
+        width: 10px;
+        padding-top: 20px;
+        top: 8px;
+        left: 391px;
+      }
+    }
+
+    &::after {
+      @include after;
+      width: getSize(14%);
+      padding-top: getSize(32%);
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/textDeco_right02.svg") no-repeat center top / 100% auto;
+      position: absolute;
+      top: 16%;
+      right: 13%;
+
+      @include media(pc) {
+        width: 10px;
+        padding-top: 20px;
+        top: 8px;
+        right: 391px;
+      }
+    }
+  }
+
+  &download_flexBox {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @include media(pc) {
+      margin-top: 12px;
+    }
+  }
+
+  &download_waon {
+    width: getSize(128%);
+
+    @include media(pc) {
+      width: 96px;
+      border-radius: 27px;
+    }
+  }
+
+  &download_btn {
+    margin-left: 3%;
+    width: getSize(348%);
+
+    @include media(pc) {
+      width: 262px;
+      margin-left: 18px;
+    }
+  }
+
+  &download_qr {
+    @include media(pc) {
+      width: 96px;
+      margin-left: 17px;
+    }
+  }
+
+  &download_link {
+    width: getSize(680vw);
+    margin: 9.5% auto 0;
+    padding: getSize(20%) 0;
+    font-size: getSize(28vw);
+    font-weight: 700;
+    line-height: lh(34, 28);
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, #E4006E 0%, #ED86B3 41%, #E4006E 100%);
+    border-radius: 100px;
+    box-shadow: getSize(4vw) getSize(4vw) getSize(3vw) rgba(15, 0, 68, 0.4);
+    transform: rotate(0.03deg);
+
+    @include media(pc) {
+      width: 720px;
+      padding: 17px 0;
+      margin-top: 39px;
+      font-size: 20px;
+    }
+  }
+
+  &download_link_inline {
+    &::after {
+      @include after;
+      display: inline-block;
+      width: getSize(17, 680)+'%';
+      padding-top: getSize(15.5, 680)+'%';
+      background: url("/asset/img/campaign/20220701sailormooncp/0701/arrow.svg") no-repeat center center / 100% auto;
+      transform: translateY(-15%);
+
+      @include media(pc) {
+        width: 13px;
+        padding-top: 12px;
+      }
+    }
+  }
+}

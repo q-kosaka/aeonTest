@@ -1,0 +1,35 @@
+<%_
+  const data = {
+    url: '',/* スラッシュ始まりのドメイン以下URL ( TOPの場合は空文字で ) */
+    name: '',/* bodyタグにつくid名 */
+    title:'',/* TOPの場合は空文字で */
+    description:'',/* TOPの場合は空文字で */
+    keyword:'',/* TOPの場合は空文字で */
+    device: 'pc', 
+    current:'./',
+    root: '/',
+    assetsDir:'asset/',
+    img0701:'img/campaign/20220701sailormooncp/0701/',
+    update: '1',
+  }
+_%>
+
+<%_ data.asset = function(){ _%> 
+<%_ }; data.content = function(){ _%>
+<%- include( data.current + 'includes/_common' , { data : data } ); %>
+
+<main class="lp-sailormoon">
+
+  <%- include( data.current + 'includes/_okuda', { data : data } ); %>
+
+  <%- include( data.current + 'includes/_chinen' , { data : data } ); %>
+</main>
+
+
+<%_ } _%> 
+<%_ /* 以下includeファイル */ _%>
+<%- include( data.current + 'includes/_head2_' + data.device , { data : data } ); %>
+<%- data.content(); %>
+<%- include( data.current + 'includes/_footer2_' + data.device , { data : data } ); %>
+<%- data.asset(); %>
+<%- include( data.current + 'includes/_foot2_' + data.device , { data : data } ); %>
